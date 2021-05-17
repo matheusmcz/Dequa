@@ -8,6 +8,7 @@ export function App() {
     <BrowserRouter>
       <AuthProvider>
         <Routes />
+        <h1>Olá pessoas.</h1>
       </AuthProvider>
       <GlobalStyle />
     </BrowserRouter>
