@@ -8,10 +8,6 @@ export function App() {
     <BrowserRouter>
       <AuthProvider>
         <Routes />
-        <h1>
-          Olá pessoas, tudo bem? Consegui fazer funcionar! Maceió maior que
-          Arapiraca!
-        </h1>
       </AuthProvider>
       <GlobalStyle />
     </BrowserRouter>

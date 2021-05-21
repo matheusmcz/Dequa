@@ -1,18 +1,25 @@
 import React, { createContext, useCallback, useContext, useState } from "react";
 import { api } from "../services/api";
+import { localStorageVariable } from "../util/constants/constants";
 
 interface AuthData {
   token: string;
   user: User;
 }
 
-//verificar os campos do usuário
+export enum Usertype {
+  searchingCourses = 1,
+  searchingJob = 2,
+}
+
+//TODO Verificar campos do usuário
 
 interface User {
   name: string;
   email: string;
   gender: string;
-  id: string;
+  userType: Usertype;
+  id?: string;
 }
 
 interface SignInFields {
@@ -30,8 +37,8 @@ const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 export const AuthProvider: React.FC = ({ children }) => {
   const [data, setData] = useState(() => {
-    const token = localStorage.getItem("@:token"); //COLOCAR TOKEN
-    const user = localStorage.getItem("@:user"); //COLOCAR TOKEN
+    const token = localStorage.getItem(`@${localStorageVariable}:token`);
+    const user = localStorage.getItem(`@${localStorageVariable}:user`);
 
     if (token && user) {
       api.defaults.headers.Authorization = `Bearer ${token}`;
@@ -47,8 +54,8 @@ export const AuthProvider: React.FC = ({ children }) => {
     const user = resp.data;
     const token = resp.headers.authorization;
 
-    localStorage.setItem("@:token", token); //COLOCAR TOKEN
-    localStorage.setItem("@:user", JSON.stringify(user)); //COLOCAR TOKEN
+    localStorage.setItem(`@${localStorageVariable}:token`, token);
+    localStorage.setItem(`@${localStorageVariable}:user`, JSON.stringify(user));
 
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
@@ -56,8 +63,8 @@ export const AuthProvider: React.FC = ({ children }) => {
   }, []);
 
   const signOut = useCallback(() => {
-    localStorage.removeItem("@:token"); //COLOCAR TOKEN
-    localStorage.removeItem("@:user"); //COLOCAR TOKEN
+    localStorage.removeItem(`@${localStorageVariable}:token`);
+    localStorage.removeItem(`@${localStorageVariable}:user`);
 
     setData({} as AuthData);
   }, []);
