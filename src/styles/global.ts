@@ -36,13 +36,6 @@ export const GlobalStyle = createGlobalStyle`
       font-weight: 700;
       font-style: normal;
     }
-
-    @font-face {
-      font-family: 'Helvetica-Light';
-      src: url('./assets/helveticaLight.ttf');
-      font-weight: 300;
-      font-style: normal;
-    }
   }
 
   body {

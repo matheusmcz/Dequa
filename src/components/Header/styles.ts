@@ -17,8 +17,21 @@ export const Container = styled.div`
       .searchAndLogin {
         display: flex;
         align-items: center;
+
         img:first-of-type {
           margin-right: 16px;
+        }
+
+        input {
+          display: none;
+        }
+
+        img.search:hover {
+          .mobileSearch {
+            display: flex;
+            width: 130px;
+            height: 60px;
+          }
         }
       }
     }

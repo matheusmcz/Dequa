@@ -1,4 +1,5 @@
 import React from "react";
+import { HeaderMenu } from "../HeaderMenu/indes";
 import { Container } from "./styles";
 
 export const Header: React.FC = () => {
@@ -6,10 +7,11 @@ export const Header: React.FC = () => {
     <Container>
       <section id="headerMobile">
         <div className="Menu">
-          <img src="./assets/menu.svg" alt="Menu" />
+          <HeaderMenu />
         </div>
         <div className="searchAndLogin">
-          <img src="./assets/search.svg" alt="Pesquisar" />
+          <img src="./assets/search.svg" alt="Pesquisar" className="search" />
+          <input type="text" className="mobileSearch" />
           <img src="./assets/userIcon.svg" alt="Login" />
         </div>
       </section>
