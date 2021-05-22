@@ -102,7 +102,7 @@ export const Content = styled.div`
       }
 
       a:nth-of-type(2) {
-        margin: 0 px;
+        margin: 0px 16px 0px 16px;
       }
     }
 
