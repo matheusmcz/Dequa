@@ -38,6 +38,7 @@ export const Home: React.FC = () => {
       </Banner>
       <Content>
         <h3 className="title">Vagas para você</h3>
+
         <div className="jobCard">
           <div className="jobCardImg">
             <img src="./assets/companyLogo.svg" alt="Ioasys" />
