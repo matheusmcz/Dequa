@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     @font-face {
       font-family: 'September';
       src: url('./assets/googleSeptember2015Regular.ttf');
-      font-weight: 400;
+      font-weight: normal;
       font-style: normal;
     }
 

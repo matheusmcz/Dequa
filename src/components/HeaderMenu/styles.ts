@@ -128,6 +128,7 @@ export const Content = styled.div`
     margin: -94px 0 0 0px;
     font-family: "September", sans-serif;
     font-size: 20px;
+    color: #000000;
   }
 
   .footerMenu {

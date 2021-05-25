@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterMenu } from "../FooterMenu";
+import { MenuFooter } from "../MenuFooter";
 import { Container, Content } from "./styles";
 
 export const HeaderMenu: React.FC = () => {
@@ -13,9 +13,11 @@ export const HeaderMenu: React.FC = () => {
           <span></span>
 
           <ul id="menu">
-            <p className="menuName">Nome da Marca</p>
+            <a id="menuName" href="/">
+              <p className="menuName">Nome da Marca</p>
+            </a>
 
-            <a href="/">
+            <a href="/dashboard-jobs">
               <li>Vagas</li>
             </a>
             <a href="/">
@@ -31,7 +33,7 @@ export const HeaderMenu: React.FC = () => {
               <li>Políticas</li>
             </a>
             <li className="footerMenu">
-              <FooterMenu />
+              <MenuFooter />
             </li>
           </ul>
         </div>

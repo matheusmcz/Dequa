@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -140,16 +141,20 @@ export const Banner = styled.div`
         }
 
         button {
-          font-family: "Helvetica-Bold", sans-serif;
+          font-family: Helvetica-Bold, sans-serif;
           font-size: 20px;
           line-height: 32px;
           color: var(--gray);
-
           border: none;
           background: var(--purpleDark);
           padding: 8px 58px;
           border-radius: 4px;
           margin-top: 24px;
+          transition: filter 0.2s;
+
+          &:hover {
+            filter: brightness(0.9);
+          }
         }
       }
     }
@@ -172,6 +177,59 @@ export const Banner = styled.div`
 
     .bannerImg {
       margin-right: 0;
+    }
+  }
+`;
+
+export const MoreJobs = styled(Link)`
+  margin: 0 auto;
+  @media (max-width: 800px) {
+    .moreJobs {
+      font-family: "Helvetica-Bold", sans-serif;
+      color: var(--gray);
+
+      border: none;
+      border-radius: 4px;
+      margin-top: 24px;
+
+      font-size: 18px;
+      font-weight: 700;
+      padding: 8px 14px;
+      background: var(--purpleDark);
+
+      transition: filter 0.1s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+
+      @media (max-width: 720px) {
+        max-width: 195px;
+      }
+    }
+  }
+
+  @media (min-width: 800px) {
+    .moreJobs {
+      padding: 20px 55px;
+      margin: 0 auto;
+
+      border: none;
+      border-radius: 5px;
+      background: var(--purpleDark);
+
+      font-size: 24px;
+      font-family: "Helvetica-Bold", sans-serif;
+      color: var(--gray);
+      transition: filter 0.1s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+
+      @media (max-width: 720px) {
+        max-width: 195px;
+      }
     }
   }
 `;
@@ -276,27 +334,6 @@ export const Content = styled.section`
         text-overflow: ellipsis;
       }
     }
-
-    .moreJobs {
-      font-size: 18px;
-      font-weight: 700;
-      font-family: "Helvetica-Bold", sans-serif;
-      padding: 8px 14px;
-      margin: 0 auto;
-      background: var(--purpleDark);
-      color: var(--gray);
-      border: none;
-      border-radius: 5px;
-      transition: filter 0.1s;
-
-      &:hover {
-        filter: brightness(0.8);
-      }
-
-      @media (max-width: 720px) {
-        max-width: 195px;
-      }
-    }
   }
 
   @media (min-width: 800px) {
@@ -356,10 +393,12 @@ export const Content = styled.section`
         border-radius: 4px;
         background: transparent;
 
-        font-family: "Helvetica-Bold", sans-serif;
-        font-size: 18px;
-        line-height: 28px;
-        color: var(--purpleDark);
+        a {
+          font-family: "Helvetica-Bold", sans-serif;
+          font-size: 18px;
+          line-height: 28px;
+          color: var(--purpleDark);
+        }
       }
 
       .jobName {
@@ -406,28 +445,6 @@ export const Content = styled.section`
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-      }
-    }
-
-    .moreJobs {
-      padding: 20px 55px;
-      margin: 0 auto;
-
-      border: none;
-      border-radius: 5px;
-      background: var(--purpleDark);
-
-      font-size: 24px;
-      font-family: "Helvetica-Bold", sans-serif;
-      color: var(--gray);
-      transition: filter 0.1s;
-
-      &:hover {
-        filter: brightness(0.8);
-      }
-
-      @media (max-width: 720px) {
-        max-width: 195px;
       }
     }
   }

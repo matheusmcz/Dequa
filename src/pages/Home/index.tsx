@@ -1,7 +1,8 @@
 import React from "react";
+import { BetsCompanies } from "src/components/BetsCompanies/indes";
 import { Footer } from "src/components/Footer";
 import { Header } from "../../components/Header";
-import { Banner, Container, Content } from "./styles";
+import { Banner, Container, Content, MoreJobs } from "./styles";
 
 export const Home: React.FC = () => {
   return (
@@ -37,6 +38,7 @@ export const Home: React.FC = () => {
       </Banner>
       <Content>
         <h3 className="title">Vagas para você</h3>
+
         <div className="jobCard">
           <div className="jobCardImg">
             <img src="./assets/companyLogo.svg" alt="Ioasys" />
@@ -45,7 +47,7 @@ export const Home: React.FC = () => {
             <h4 className="jobName">Auxiliar de produção</h4>
             <h5 className="jobCompany">Ioasys</h5>
             <button className="moreAbout" type="button">
-              Saber mais
+              <a href="/job-description">Saber mais</a>
             </button>
             <section className="jobLevel">
               <span className="level">Júnior/Treinee</span>
@@ -70,7 +72,7 @@ export const Home: React.FC = () => {
             <h4 className="jobName">Auxiliar de produção</h4>
             <h5 className="jobCompany">Ioasys</h5>
             <button className="moreAbout" type="button">
-              Saber mais
+              <a href="/job-description">Saber mais</a>
             </button>
             <section className="jobLevel">
               <span className="level">Júnior/Treinee</span>
@@ -95,7 +97,7 @@ export const Home: React.FC = () => {
             <h4 className="jobName">Auxiliar de produção</h4>
             <h5 className="jobCompany">Ioasys</h5>
             <button className="moreAbout" type="button">
-              Saber mais
+              <a href="/dashboard-jobs/job-opportunity">Saber mais</a>
             </button>
             <section className="jobLevel">
               <span className="level">Júnior/Treinee</span>
@@ -120,7 +122,7 @@ export const Home: React.FC = () => {
             <h4 className="jobName">Auxiliar de produção</h4>
             <h5 className="jobCompany">Ioasys</h5>
             <button className="moreAbout" type="button">
-              Saber mais
+              <a href="/dashboard-jobs/job-opportunity">Saber mais</a>
             </button>
             <section className="jobLevel">
               <span className="level">Júnior/Treinee</span>
@@ -145,7 +147,7 @@ export const Home: React.FC = () => {
             <h4 className="jobName">Auxiliar de produção</h4>
             <h5 className="jobCompany">Ioasys</h5>
             <button className="moreAbout" type="button">
-              Saber mais
+              <a href="/job-description">Saber mais</a>
             </button>
             <section className="jobLevel">
               <span className="level">Júnior/Treinee</span>
@@ -162,10 +164,13 @@ export const Home: React.FC = () => {
           </div>
         </div>
 
-        <button type="button" className="moreJobs">
-          Ver todas as vagas
-        </button>
+        <MoreJobs to="/dashboard-jobs">
+          <button type="button" className="moreJobs">
+            Ver todas as vagas
+          </button>
+        </MoreJobs>
       </Content>
+      <BetsCompanies />
       <Footer />
     </Container>
   );
