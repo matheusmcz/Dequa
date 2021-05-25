@@ -1,6 +1,6 @@
 import React from "react";
 import { HeaderMenu } from "../HeaderMenu/indes";
-import { Container } from "./styles";
+import { Container, Jobs } from "./styles";
 
 export const Header: React.FC = () => {
   return (
@@ -18,17 +18,20 @@ export const Header: React.FC = () => {
 
       <section id="headerDesktop">
         <div>
-          <img src="./assets/logo.svg" alt="Logo" />
+          <img className="headerLogo" src="./assets/logo.svg" alt="Logo" />
         </div>
         <div className="menu">
           <div className="inputMenu">
             <img src="./assets/search.svg" alt="" />
             <input type="text" placeholder="Pesquisar" />
           </div>
-          <button type="button">
-            <img src="./assets/jobsIcon.svg" alt="Vagas" />
-            <a href="/">Vagas</a>
-          </button>
+          <Jobs to="/dashboard-jobs">
+            <button type="button">
+              <img src="./assets/jobsIcon.svg" alt="Vagas" />
+              <a href="/">Vagas</a>
+            </button>
+          </Jobs>
+
           <button type="button">
             <img src="./assets/premiumIcon.svg" alt="Premium" />
             <a href="/">Premium</a>

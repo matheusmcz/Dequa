@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -105,6 +106,26 @@ export const Container = styled.div`
             color: var(--gray);
           }
         }
+      }
+    }
+  }
+`;
+
+export const Jobs = styled(Link)`
+  .menu {
+    display: flex;
+
+    button {
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      margin-left: 54px;
+
+      a {
+        margin-left: 10px;
+        font-family: "Helvetica-Bold", sans-serif;
+        color: var(--gray);
       }
     }
   }
