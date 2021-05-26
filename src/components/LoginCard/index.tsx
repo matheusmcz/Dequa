@@ -1,34 +1,33 @@
-import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { useAuth } from "../../context/auth";
+import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Content } from "./styles";
 
-interface LoginCredentials {
-  email: string;
-  password: string;
-}
+// interface LoginCredentials {
+//   email: string;
+//   password: string;
+// }
 
 export const LoginCard: React.FC = () => {
-  const history = useHistory();
+  // const history = useHistory();
 
-  const [loginCredentials, setLoginCredentials] = useState<LoginCredentials>({
-    email: "",
-    password: "",
-  } as LoginCredentials);
+  // const [loginCredentials, setLoginCredentials] = useState<LoginCredentials>({
+  //   email: "",
+  //   password: "",
+  // } as LoginCredentials);
 
-  const { signIn } = useAuth();
+  // const { signIn } = useAuth();
 
-  async function login(event: any) {
-    event.preventDefault();
-    await signIn({
-      email: loginCredentials.email,
-      password: loginCredentials.password,
-    });
+  // async function login(event: any) {
+  //   event.preventDefault();
+  //   await signIn({
+  //     email: loginCredentials.email,
+  //     password: loginCredentials.password,
+  //   });
 
-    //TODO COLOCAR O NOME DA PAGINA
+  //TODO COLOCAR O NOME DA PAGINA
 
-    history.push("/");
-  }
+  //   history.push("/");
+  // }
 
   return (
     <Container>
@@ -42,7 +41,7 @@ export const LoginCard: React.FC = () => {
           <span>Entrar no seu perfil</span>
         </Link>
 
-        <form onSubmit={login} className="formLogin">
+        <form className="formLogin">
           <span className="emailField">
             <p>Email</p>
             <input type="email" placeholder="Digite seu e-mail" />

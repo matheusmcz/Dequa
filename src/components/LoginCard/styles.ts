@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: grid;
+  display: none;
   position: absolute;
 
   @media (max-width: 800px) {
