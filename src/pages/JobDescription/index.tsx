@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 import { Container, Content } from "./styles";
@@ -11,20 +12,20 @@ export const JobDescription: React.FC = () => {
       <Content>
         <section id="companyProfile">
           <div className="goBack">
-            <a href="/">
+            <Link to="/">
               <span>Home</span>
-            </a>
+            </Link>
 
-            <a href="/dashboard-jobs">
+            <Link to="/dashboard-jobs">
               <img
                 src="./assets/leftVector.svg"
                 alt="Voltar"
                 className="pathVector"
               />
               <span>Vagas de emprego</span>
-            </a>
+            </Link>
 
-            <a href="/dashboard-jobs">
+            <Link to="/dashboard-jobs">
               <img
                 src="./assets/leftVector.svg"
                 alt="Voltar"
@@ -32,7 +33,7 @@ export const JobDescription: React.FC = () => {
               />
 
               <span>Auxiliar de produção</span>
-            </a>
+            </Link>
           </div>
 
           <div id="jobInformation">
