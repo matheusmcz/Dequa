@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../context/auth";
-import { Container } from "./styles";
+import { Container, Content } from "./styles";
 
 interface LoginCredentials {
   email: string;
@@ -32,12 +32,38 @@ export const LoginCard: React.FC = () => {
 
   return (
     <Container>
-      <form onSubmit={login}>
-        <input type="email" />
-        <div>
-          <input type="password" />
-        </div>
-      </form>
+      <Content>
+        <Link to="/" className="goBack">
+          <img
+            src="./assets/leftVector.svg"
+            alt="Voltar"
+            className="pathVector"
+          />
+          <span>Entrar no seu perfil</span>
+        </Link>
+
+        <form onSubmit={login} className="formLogin">
+          <span className="emailField">
+            <p>Email</p>
+            <input type="email" placeholder="Digite seu e-mail" />
+          </span>
+          <span className="passwordField">
+            <p>Senha</p>
+            <input type="password" placeholder="Digite sua senha" />
+          </span>
+
+          <span className="forgotPassword">
+            <Link to="/">Esqueceu sua senha?</Link>
+          </span>
+
+          <button type="submit">Entrar</button>
+        </form>
+
+        <span className="signIn">
+          <p>Ainda não tem conta?</p>
+          <Link to="/">Cadastre-se</Link>
+        </span>
+      </Content>
     </Container>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { BetsCompanies } from "src/components/BetsCompanies/indes";
 import { Footer } from "src/components/Footer";
 import { JobCard } from "src/components/JobCard/indes";
+import { LoginCard } from "src/components/LoginCard";
 import { Header } from "../../components/Header";
 import { Banner, Container, Content, MoreJobs } from "./styles";
 
@@ -52,6 +53,7 @@ export const Home: React.FC = () => {
       </Content>
       <BetsCompanies />
       <Footer />
+      <LoginCard />
     </Container>
   );
 };

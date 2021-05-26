@@ -8,7 +8,11 @@ export const SearchCard: React.FC = () => {
       <div className="goBack">
         <Link to="/">
           <span>Home</span>
-          <img src="./assets/leftVector.svg" alt="Voltar" />
+          <img
+            src="./assets/leftVector.svg"
+            alt="Voltar"
+            className="pathVector"
+          />
           <span>Vagas de emprego</span>
         </Link>
       </div>
