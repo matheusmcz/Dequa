@@ -3,7 +3,7 @@ import { api } from "src/services/api";
 import { Container } from "./styles";
 
 export const FooterPages: React.FC = () => {
-  const [jobs, setJobs] = useState([]);
+  const [, setJobs] = useState([]);
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState(0);
   useEffect(() => {

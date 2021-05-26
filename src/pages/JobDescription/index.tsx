@@ -13,36 +13,54 @@ export const JobDescription: React.FC = () => {
           <div className="goBack">
             <a href="/">
               <span>Home</span>
-              <img src="./assets/leftVector.svg" alt="Voltar" />
+            </a>
+
+            <a href="/dashboard-jobs">
+              <img
+                src="./assets/leftVector.svg"
+                alt="Voltar"
+                className="pathVector"
+              />
               <span>Vagas de emprego</span>
+            </a>
+
+            <a href="/dashboard-jobs">
+              <img
+                src="./assets/leftVector.svg"
+                alt="Voltar"
+                className="pathVector"
+              />
+
+              <span>Auxiliar de produção</span>
             </a>
           </div>
 
-          <img
-            className="companyProfilePicture"
-            src="./assets/companyProfilePicture.png"
-            alt="Company"
-          />
-
           <div id="jobInformation">
-            <p className="title">Auxiliar de produção</p>
-            <p className="company">Ioasys</p>
-            <p className="level">Júnior/Trainee</p>
-            <span className="location">
-              <img src="./assets/pin.svg" alt="" />
-              João Pessoa
-            </span>
-            <span className="payment">
-              <img src="./assets/money.svg" alt="" />
-              Faixa salarial a combinar
-            </span>
-            <span className="modality">
-              <img src="./assets/jobsIcon.svg" alt="" />
-              Contrato CLT
-            </span>
+            <img
+              className="companyProfilePicture"
+              src="./assets/companyProfilePicture.png"
+              alt="Company"
+            />
+            <section className="info">
+              <p className="title">Auxiliar de produção</p>
+              <p className="company">Ioasys</p>
+              <p className="level">Júnior/Trainee</p>
+              <span className="location">
+                <img src="./assets/pin.svg" alt="" />
+                João Pessoa
+              </span>
+              <span className="payment">
+                <img src="./assets/money.svg" alt="" />
+                Faixa salarial a combinar
+              </span>
+              <span className="modality">
+                <img src="./assets/jobsIcon.svg" alt="" />
+                Contrato CLT
+              </span>
+            </section>
           </div>
 
-          <div id="jobDescription">
+          <div id="jobDescription" className="sectionsStyles">
             <p className="title">Detalhes da vaga</p>
 
             <span className="text">
@@ -54,7 +72,7 @@ export const JobDescription: React.FC = () => {
             </span>
           </div>
 
-          <div id="companyDescription">
+          <div id="companyDescription" className="sectionsStyles">
             <p className="title">Informações sobre a empresa</p>
 
             <span className="text">
@@ -67,7 +85,7 @@ export const JobDescription: React.FC = () => {
             </span>
           </div>
 
-          <div id="skills">
+          <div id="skills" className="sectionsStyles">
             <p className="title">Habilidades necessárias</p>
 
             <ul>
@@ -80,17 +98,22 @@ export const JobDescription: React.FC = () => {
             </ul>
           </div>
 
-          <div id="schedule">
+          <div id="schedule" className="sectionsStyles">
             <p className="title">Carga horária</p>
             <p className="text">8 horas diárias</p>
           </div>
 
-          <div id="accessibility">
+          <div id="accessibility" className="sectionsStyles">
             <p className="title">A empresa tem acessibilidade</p>
             <span className="text">
               Sim, a empresa tem todos os artefatos necessários para lidar com
               sua deficiência.
             </span>
+          </div>
+
+          <div className="applyCard">
+            <img src="./assets/companyLogo.svg" alt="Ioasys" />
+            <button type="submit">Aplicar para vaga</button>
           </div>
         </section>
 
