@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { HeaderMenu } from "../HeaderMenu/indes";
 import { Container, Jobs } from "./styles";
 
@@ -28,17 +29,17 @@ export const Header: React.FC = () => {
           <Jobs to="/dashboard-jobs">
             <button type="button">
               <img src="./assets/jobsIcon.svg" alt="Vagas" />
-              <a href="/">Vagas</a>
+              <Link to="/">Vagas</Link>
             </button>
           </Jobs>
 
           <button type="button">
             <img src="./assets/premiumIcon.svg" alt="Premium" />
-            <a href="/">Premium</a>
+            <Link to="/">Premium</Link>
           </button>
           <button type="button">
             <img src="./assets/userIcon.svg" alt="Login" />
-            <a href="/">Login</a>
+            <Link to="/">Login</Link>
           </button>
         </div>
       </section>

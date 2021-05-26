@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Content } from "./styles";
 
 export const SearchCard: React.FC = () => {
   return (
     <Container>
       <div className="goBack">
-        <a href="/">
+        <Link to="/">
           <span>Home</span>
           <img src="./assets/leftVector.svg" alt="Voltar" />
           <span>Vagas de emprego</span>
-        </a>
+        </Link>
       </div>
       <Content>
         <div id="searchCardTop">

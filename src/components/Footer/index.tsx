@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Content } from "./styles";
 
 export const Footer: React.FC = () => {
@@ -30,23 +31,23 @@ export const Footer: React.FC = () => {
 
         <section className="aboutUs">
           <h4>SOBRE NÓS</h4>
-          <a href="/">Sobre nós</a>
-          <a href="/">Entrar em contato</a>
-          <a href="/">Seja nosso vendedor</a>
+          <Link to="/">Sobre nós</Link>
+          <Link to="/">Entrar em contato</Link>
+          <Link to="/">Seja nosso vendedor</Link>
         </section>
 
         <section className="categories">
           <h4>CATEGORIAS</h4>
-          <a href="/">Login</a>
-          <a href="/">Cadastro</a>
-          <a href="/">Premium</a>
+          <Link to="/">Login</Link>
+          <Link to="/">Cadastro</Link>
+          <Link to="/">Premium</Link>
         </section>
 
         <section className="policies">
           <h4>POLÍTICAS</h4>
-          <a href="/">Termos de uso</a>
-          <a href="/">Política de privacidade</a>
-          <a href="/">Política de devolução</a>
+          <Link to="/">Termos de uso</Link>
+          <Link to="/">Política de privacidade</Link>
+          <Link to="/">Política de devolução</Link>
         </section>
       </Content>
     </Container>
