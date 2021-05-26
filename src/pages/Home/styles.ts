@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   overflow-x: hidden;
+  position: relative;
 `;
 
 export const Banner = styled.div`

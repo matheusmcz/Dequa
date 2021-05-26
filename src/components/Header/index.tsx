@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
           <Jobs to="/dashboard-jobs">
             <button type="button">
               <img src="./assets/jobsIcon.svg" alt="Vagas" />
-              <Link to="/">Vagas</Link>
+              Vagas
             </button>
           </Jobs>
 
@@ -39,7 +39,7 @@ export const Header: React.FC = () => {
           </button>
           <button type="button">
             <img src="./assets/userIcon.svg" alt="Login" />
-            <Link to="/">Login</Link>
+            Login
           </button>
         </div>
       </section>

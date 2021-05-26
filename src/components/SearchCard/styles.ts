@@ -30,28 +30,21 @@ export const Container = styled.div`
 
   @media (min-width: 800px) {
     .goBack {
-      margin-top: 26px;
-      margin-left: 40px;
+      display: flex;
+      align-items: center;
+      padding: 26px 0 0 40px;
 
       a {
         display: flex;
         align-items: center;
         color: #000000;
-      }
-
-      img {
-        margin: 0 8px;
-        transform: rotateY(180deg);
-      }
-
-      span:nth-child(1) {
+        font-family: "September", sans-serif;
         font-size: 18px;
       }
 
-      span {
-        font-family: "Helvetica", sans-serif;
-        font-size: 20px;
-        font-weight: 400;
+      .pathVector {
+        transform: rotateY(180deg);
+        padding: 0 10px;
       }
     }
   }

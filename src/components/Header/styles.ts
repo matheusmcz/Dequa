@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: relative;
+
   @media (max-width: 800px) {
+    z-index: 9999;
+
     #headerMobile {
       display: flex;
       align-items: center;
@@ -72,9 +76,14 @@ export const Container = styled.div`
           align-items: center;
           margin-left: 54px;
 
+          font-family: "Helvetica-Bold", sans-serif;
+          color: var(--gray);
+
+          img {
+            margin-right: 10px;
+          }
+
           a {
-            margin-left: 10px;
-            font-family: "Helvetica-Bold", sans-serif;
             color: var(--gray);
           }
         }
@@ -112,21 +121,19 @@ export const Container = styled.div`
 `;
 
 export const Jobs = styled(Link)`
-  .menu {
+  display: flex;
+
+  img {
+    margin-right: 10px;
+  }
+
+  button {
+    font-family: "Helvetica-Bold", sans-serif;
+    color: var(--gray);
+    background: transparent;
+    border: none;
     display: flex;
-
-    button {
-      background: transparent;
-      border: none;
-      display: flex;
-      align-items: center;
-      margin-left: 54px;
-
-      a {
-        margin-left: 10px;
-        font-family: "Helvetica-Bold", sans-serif;
-        color: var(--gray);
-      }
-    }
+    align-items: center;
+    margin-left: 54px;
   }
 `;
