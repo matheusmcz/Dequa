@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container } from "./styles";
 
 export const JobCard: React.FC = () => {
@@ -13,7 +14,7 @@ export const JobCard: React.FC = () => {
           <h5 className="jobCompany">Ioasys</h5>
 
           <button className="moreAbout" type="button">
-            <a href="/job-description">Saber mais</a>
+            <Link to="/job-description">Saber mais</Link>
           </button>
 
           <section className="jobLevel">
