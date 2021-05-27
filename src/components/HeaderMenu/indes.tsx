@@ -21,7 +21,7 @@ export const HeaderMenu: React.FC = () => {
             <Link to="/dashboard-jobs">
               <li>Vagas</li>
             </Link>
-            <Link to="/">
+            <Link to="/payment">
               <li>Plano Premium</li>
             </Link>
             <Link to="/">
