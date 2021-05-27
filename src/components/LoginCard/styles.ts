@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: none;
+  display: grid;
   position: absolute;
 
   @media (max-width: 800px) {
@@ -103,9 +103,12 @@ export const Content = styled.div`
       }
 
       a {
+        font-family: "Helvetica", sans-serif;
+        font-size: 14px;
         font-weight: 700;
         color: var(--purpleDark);
         text-decoration: underline;
+        margin-left: 8px;
       }
     }
   }

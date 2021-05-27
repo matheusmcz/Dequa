@@ -60,7 +60,7 @@ export const LoginCard: React.FC = () => {
 
         <span className="signIn">
           <p>Ainda não tem conta?</p>
-          <Link to="/">Cadastre-se</Link>
+          <Link to="/signin">Cadastre-se</Link>
         </span>
       </Content>
     </Container>

@@ -5,8 +5,10 @@ import { Header } from "src/components/Header";
 import { JobCard } from "src/components/JobCard/indes";
 import { SearchCard } from "src/components/SearchCard";
 import { Container, Content, List } from "./styles";
+// import { useAuth, Usertype } from "src/context/auth";
 
 export const DashboardJobs: React.FC = () => {
+  // const { user } = useAuth();
   return (
     <Container>
       <Header />
