@@ -16,7 +16,11 @@ export const Home: React.FC = () => {
         </div>
         <section className="bannerText">
           <h2>Educação inclusiva</h2>
-          <span>Cursos preparatórios ministrados pensando em você!</span>
+          <span>
+            Nosso intuito é promover e facilitar a presença de deficientes
+            auditivos e de fala no mercado de trabalho. Seja Premium e conheça
+            nossos eventos voltados para sua capacitação.
+          </span>
           <p>
             Nosso intuito é promover e facilitar a presença de deficientes
             auditivos e de fala no mercado de trabalho, auxiliando na busca de

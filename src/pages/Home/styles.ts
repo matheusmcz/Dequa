@@ -16,30 +16,28 @@ export const Banner = styled.div`
     background-position: 100% 100%;
 
     border: none;
-    border-bottom-right-radius: 60px;
-    border-top-left-radius: 60px;
-    border-bottom-left-radius: 60px;
 
     min-width: 324px;
     min-height: 288px;
-    margin: 40px 16px;
-    padding-left: 4px;
+    padding-left: 16px;
 
     .bannerText {
       h2 {
         font-size: 30px;
         font-weight: 400;
         line-height: 36px;
-        margin-top: 56px;
+        margin-top: 32px;
         font-family: "September", sans-serif;
+        margin-bottom: 16px;
       }
 
       span {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 28px;
+        text-align: center;
+        font-size: 14px;
         padding-left: 4px;
-        font-family: "Helvetica-Bold", sans-serif;
+        width: 270px;
+        height: 100px;
+        font-family: "Helvetica", sans-serif;
       }
 
       p {
@@ -54,6 +52,7 @@ export const Banner = styled.div`
         text-decoration: underline;
         padding-left: 4px;
         font-family: "September", sans-serif;
+        margin-top: 16px;
       }
 
       button {
@@ -89,7 +88,6 @@ export const Banner = styled.div`
       position: absolute;
       min-width: 141px;
       min-height: 72px;
-      border-bottom-left-radius: 60px;
       bottom: -20px;
       left: -5px;
       margin-left: 8px;
