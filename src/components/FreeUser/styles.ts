@@ -48,7 +48,7 @@ export const Content = styled.div`
       border-radius: 4px;
 
       a {
-        font-family: "Helvetica", sans-serif;
+        font-family: "Helvetica-Bold", sans-serif;
         font-size: 18px;
         line-height: 28px;
         color: var(--gray);
@@ -103,7 +103,7 @@ export const Content = styled.div`
       border-radius: 4px;
 
       a {
-        font-family: "Helvetica", sans-serif;
+        font-family: "Helvetica-Bold", sans-serif;
         font-size: 18px;
         line-height: 28px;
         color: var(--gray);

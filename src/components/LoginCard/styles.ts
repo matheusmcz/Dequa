@@ -82,7 +82,7 @@ export const Content = styled.div`
       margin: 40px 16px 32px 16px;
       padding: 8px 121px;
 
-      font-family: "Helvetica", sans-serif;
+      font-family: "Helvetica-Bold", sans-serif;
       font-size: 18px;
       line-height: 28px;
       background: var(--purpleDark);
@@ -183,7 +183,7 @@ export const Content = styled.div`
       display: flex;
       margin: 48px auto 16px auto;
       padding: 8px 121px;
-      font-family: "Helvetica", sans-serif;
+      font-family: "Helvetica-Bold", sans-serif;
       font-size: 18px;
       line-height: 28px;
       background: var(--purpleDark);
