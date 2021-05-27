@@ -30,6 +30,7 @@ export const Register: React.FC = () => {
       <Header />
       <Content>
         <Link to="/" className="goBack">
+          <span>Home</span>
           <img
             src="./assets/leftVector.svg"
             alt="Voltar"
