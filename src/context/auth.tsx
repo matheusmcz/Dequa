@@ -17,7 +17,7 @@ export enum Usertype {
 interface User {
   name: string;
   email: string;
-  gender: string;
+  birth: string;
   userType: Usertype;
   id?: string;
 }
