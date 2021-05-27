@@ -2,17 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Content } from "./styles";
 
-export const FreeUser: React.FC = () => {
+export const Payment: React.FC = () => {
   return (
     <Container>
       <Content>
-        <form className="registerForm">
-          <p className="titleDesktop">Cadastrar</p>
+        <Link to="/" className="goBack">
+          <img
+            src="./assets/leftVector.svg"
+            alt="Voltar"
+            className="pathVector"
+          />
+          <span>Cadastro</span>
+        </Link>
 
-          <p className="registerDescription">
-            Crie seu perfil e tenha acesso gratuito a todas as vagas do nosso
-            catálogo.
-          </p>
+        <form className="registerForm">
+          <p className="registerDescription">Hello Woody!</p>
 
           <input
             className="registerName basicsInputStyles"
@@ -54,7 +58,7 @@ export const FreeUser: React.FC = () => {
           />
 
           <button type="submit">
-            <Link to="/">Cadastrar</Link>
+            <p>Cadastrar</p>
           </button>
         </form>
       </Content>

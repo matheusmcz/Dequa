@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Content } from "./styles";
 
 export const PremiumUser: React.FC = () => {
@@ -6,6 +7,7 @@ export const PremiumUser: React.FC = () => {
     <Container>
       <Content>
         <form className="registerForm">
+          <p className="titleDesktop">Cadastrar</p>
           <p className="registerDescription">
             Crie seu perfil premium e tenha acesso a todas as vagas e cursos de
             especialização do nosso catálogo. Tudo isso por apenas 12 x R$79,90.
@@ -51,7 +53,7 @@ export const PremiumUser: React.FC = () => {
           />
 
           <button type="submit">
-            <p>Cadastrar</p>
+            <Link to="/payment">Cadastrar</Link>
           </button>
         </form>
       </Content>
