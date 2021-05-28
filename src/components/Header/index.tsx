@@ -10,6 +10,7 @@ export const Header: React.FC = () => {
         <div className="Menu">
           <HeaderMenu />
         </div>
+
         <div className="searchAndLogin">
           <img src="./assets/search.svg" alt="Pesquisar" className="search" />
           <input type="text" className="mobileSearch" />
@@ -21,11 +22,13 @@ export const Header: React.FC = () => {
         <div>
           <img className="headerLogo" src="./assets/logo.svg" alt="Logo" />
         </div>
+
         <div className="menu">
           <div className="inputMenu">
             <img src="./assets/search.svg" alt="" />
             <input type="text" placeholder="Pesquisar" />
           </div>
+
           <Jobs to="/dashboard-jobs">
             <button type="button">
               <img src="./assets/jobsIcon.svg" alt="Vagas" />
@@ -37,6 +40,12 @@ export const Header: React.FC = () => {
             <img src="./assets/premiumIcon.svg" alt="Premium" />
             <Link to="/">Premium</Link>
           </button>
+
+          <button type="button">
+            <img src="./assets/eventsIcon.svg" alt="Eventos" />
+            <Link to="/cursos">Eventos</Link>
+          </button>
+
           <button type="button">
             <img src="./assets/userIcon.svg" alt="Login" />
             Login
