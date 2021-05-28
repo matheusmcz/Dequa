@@ -11,6 +11,7 @@ export const Container = styled.div`
       margin-bottom: 24px;
       cursor: pointer;
       transition: filter 0.1s;
+      color: #000000;
 
       &:hover {
         filter: brightness(0.9);
@@ -112,6 +113,10 @@ export const Container = styled.div`
       margin: 0 40px 80px 40px;
       cursor: pointer;
       transition: filter 0.1s;
+      color: #000000;
+
+      a {
+      }
 
       &:hover {
         filter: brightness(0.9);
@@ -149,10 +154,12 @@ export const Container = styled.div`
         border-radius: 4px;
         background: transparent;
 
-        font-family: "Helvetica-Bold", sans-serif;
-        font-size: 18px;
-        line-height: 28px;
-        color: var(--purpleDark);
+        a {
+          font-family: "Helvetica-Bold", sans-serif;
+          font-size: 18px;
+          line-height: 28px;
+          color: var(--purpleDark);
+        }
       }
 
       .jobName {
