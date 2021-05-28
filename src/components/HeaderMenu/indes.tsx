@@ -21,9 +21,14 @@ export const HeaderMenu: React.FC = () => {
             <Link to="/dashboard-jobs">
               <li>Vagas</li>
             </Link>
+
             <Link to="/payment">
               <li>Plano Premium</li>
             </Link>
+            <Link to="/cursos">
+              <li>Eventos</li>
+            </Link>
+
             <Link to="/">
               <li>Central de atendimento</li>
             </Link>

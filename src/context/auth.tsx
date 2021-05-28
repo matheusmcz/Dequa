@@ -8,8 +8,8 @@ interface AuthData {
 }
 
 export enum Usertype {
-  searchingCourses = 1,
-  searchingJob = 2,
+  free = "free",
+  premium = "premium",
 }
 
 //TODO Verificar campos do usuário

@@ -34,7 +34,7 @@ export const FooterPages: React.FC = () => {
     localStorage.setItem("@:page", page.toString());
   }
   return (
-    <Container>
+    <Container className="footerPages">
       <button onClick={previousPage} className="leftArrow">
         <img src="./assets/leftArrow.svg" alt="Anterior" />
       </button>
