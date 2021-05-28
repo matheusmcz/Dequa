@@ -5,7 +5,7 @@ import { Container } from "./styles";
 export const JobCard: React.FC = () => {
   return (
     <Container>
-      <div className="jobCard">
+      <Link className="jobCard" to="/job-description">
         <div className="jobCardImg">
           <img src="./assets/companyLogo.svg" alt="Ioasys" />
         </div>
@@ -30,7 +30,7 @@ export const JobCard: React.FC = () => {
             do país...
           </p>
         </div>
-      </div>
+      </Link>
     </Container>
   );
 };
