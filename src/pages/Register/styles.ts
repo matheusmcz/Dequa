@@ -127,6 +127,11 @@ export const Content = styled.div`
       }
     }
 
+    .free,
+    .premium {
+      cursor: pointer;
+    }
+
     @keyframes appear {
       from {
         width: 0;
