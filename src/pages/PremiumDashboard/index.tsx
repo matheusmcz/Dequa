@@ -4,7 +4,7 @@ import { Footer } from "src/components/Footer";
 import { FooterPages } from "src/components/FooterPages";
 import { Header } from "src/components/Header";
 import { SearchCardEvents } from "src/components/SearchCardEvents";
-import { Container, Content, EventsList } from "./styles";
+import { Container, Content, DashBoard, EventsList } from "./styles";
 
 export const PremiumDashboard: React.FC = () => {
   return (
@@ -12,13 +12,18 @@ export const PremiumDashboard: React.FC = () => {
       <Header />
       <Content>
         <SearchCardEvents />
-        <h3 className="eventsTitle">Principais eventos</h3>
 
-        <EventsList>
-          <EventCard />
-          <EventCard />
-          <EventCard />
-        </EventsList>
+        <DashBoard>
+          <h3 className="eventsTitle">Principais eventos para você</h3>
+          <EventsList>
+            <EventCard />
+            <EventCard />
+            <EventCard />
+            <EventCard />
+            <EventCard />
+            <EventCard />
+          </EventsList>
+        </DashBoard>
       </Content>
       <FooterPages />
       <Footer />
