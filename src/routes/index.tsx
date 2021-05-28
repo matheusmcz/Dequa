@@ -2,6 +2,7 @@ import React from "react";
 import { Switch } from "react-router-dom";
 import { Payment } from "src/components/Payment";
 import { DashboardJobs } from "src/pages/DashboardJobs";
+import { EventPage } from "src/pages/EventPage";
 import { JobDescription } from "src/pages/JobDescription";
 import { PremiumDashboard } from "src/pages/PremiumDashboard";
 import { Register } from "src/pages/Register";
@@ -17,6 +18,7 @@ const Routes: React.FC = () => {
       <Route path="/signin" component={Register} />
       <Route path="/payment" component={Payment} />
       <Route path="/cursos" component={PremiumDashboard} />
+      <Route path="/evento" component={EventPage} />
     </Switch>
   );
 };
