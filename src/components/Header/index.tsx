@@ -10,6 +10,7 @@ export const Header: React.FC = () => {
         <div className="Menu">
           <HeaderMenu />
         </div>
+        <img className="mobileLogo" src="./assets/headerWhiteLogo.png" alt="" />
 
         <div className="searchAndLogin">
           <img src="./assets/search.svg" alt="Pesquisar" className="search" />
@@ -20,7 +21,16 @@ export const Header: React.FC = () => {
 
       <section id="headerDesktop">
         <div>
-          <img className="headerLogo" src="./assets/logo.svg" alt="Logo" />
+          <img
+            className="headerLogo"
+            src="./assets/headerColorFullLogo.png"
+            alt="Logo"
+          />
+          <img
+            className="headerWhiteLogo"
+            src="./assets/headerWhiteLogo.png"
+            alt=""
+          />
         </div>
 
         <div className="menu">

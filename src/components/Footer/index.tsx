@@ -7,7 +7,18 @@ export const Footer: React.FC = () => {
     <Container>
       <Content>
         <section className="socialMedia">
-          <img src="./assets/logo.svg" alt="Logo" className="logoImg" />
+          <img
+            src="./assets/footerWhiteLogo.png"
+            alt="Logo"
+            className="logoImg"
+          />
+
+          <img
+            src="./assets/footerColorFullLogo.png"
+            alt=""
+            className="footerColorFullLogo"
+          />
+
           <h4>REDES SOCIAIS</h4>
           <div>
             <a href="https://twitter.com/ioasys_br">
