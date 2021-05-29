@@ -7,7 +7,7 @@ export const Container = styled.div`
   overflow-x: hidden;
 
   .headerLogo {
-    opacity: 0;
+    display: none;
   }
 
   #headerDesktop {

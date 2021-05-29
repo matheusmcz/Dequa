@@ -7,6 +7,10 @@ export const Container = styled.div`
   grid-template-columns: 1fr;
   overflow-x: hidden;
   position: relative;
+
+  .headerWhiteLogo {
+    display: none;
+  }
 `;
 
 export const Banner = styled.div`

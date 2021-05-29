@@ -6,7 +6,7 @@ export const Container = styled.div`
   height: 100vh;
 
   .headerLogo {
-    opacity: 0;
+    display: none;
   }
 
   #headerDesktop {

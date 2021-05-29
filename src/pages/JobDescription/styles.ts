@@ -7,7 +7,7 @@ export const Container = styled.div`
   #headerDesktop {
     background: var(--softGreen);
     .headerLogo {
-      opacity: 0;
+      display: none;
     }
   }
 `;

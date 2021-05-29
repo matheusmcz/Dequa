@@ -14,6 +14,12 @@ export const Container = styled.div`
       padding: 15px;
       background: var(--softGreen);
 
+      .mobileLogo {
+        max-height: 34px;
+        max-width: 110px;
+        margin-right: 120px;
+      }
+
       .menu {
         display: flex;
         align-items: center;

@@ -22,6 +22,11 @@ export const Content = styled.div`
 
     .socialMedia {
       .logoImg {
+        display: flex;
+        margin: 0 48px 40px 48px;
+      }
+
+      .footerColorFullLogo {
         display: none;
       }
 
@@ -108,6 +113,10 @@ export const Content = styled.div`
       flex-direction: column;
       align-items: flex-start;
       left: 0;
+
+      .logoImg {
+        display: none;
+      }
 
       div {
         display: flex;
