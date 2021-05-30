@@ -43,8 +43,10 @@ export const FreeUser: React.FC = () => {
       toast.error("Insira sua data de nascimento");
     } else if (disability === undefined) {
       toast.error("Selecione uma deficiencia");
-    } else if (password.length === 0 || password !== confirmPassword) {
+    } else if (password.length === 0) {
       toast.error("Insira sua senha");
+    } else if (password !== confirmPassword) {
+      toast.error("As senhas não conferem");
     } else
       api
         .post("/freeUsers", {
