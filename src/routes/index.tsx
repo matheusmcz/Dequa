@@ -23,11 +23,11 @@ const Routes: React.FC = () => {
     <Switch>
       <Route path={home} exact component={Home} />
       <Route path={dashboardJobs} component={DashboardJobs} />
-      <Route path={jobDescription} component={JobDescription} />
+      <Route path={jobDescription} isPrivate component={JobDescription} />
       <Route path={signup} component={Register} />
       <Route path={payment} component={Payment} />
-      <Route path={dashboardEvents} component={PremiumDashboard} />
-      <Route path={eventDescription} component={EventPage} />
+      <Route path={dashboardEvents} isPrivate component={PremiumDashboard} />
+      <Route path={eventDescription} isPrivate component={EventPage} />
     </Switch>
   );
 };

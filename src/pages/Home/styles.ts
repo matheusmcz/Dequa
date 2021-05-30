@@ -131,16 +131,17 @@ export const Banner = styled.div`
       }
 
       .premium {
-        margin-top: 40px;
         h3 {
           display: none;
         }
 
         p {
+          margin-top: 40px;
           font-family: "Helvetica-Bold", sans-serif;
           font-size: 18px;
           line-height: 28px;
           max-width: 356px;
+          color: #000000;
         }
 
         button {

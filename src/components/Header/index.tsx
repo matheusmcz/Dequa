@@ -1,14 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { useAuth, Usertype } from "src/context/auth";
 import {
   dashboardEvents,
   dashboardJobs,
+  home,
   payment,
+  signup,
 } from "src/routes/routes_constants";
 import { HeaderMenu } from "../HeaderMenu/indes";
 import { Container, Jobs } from "./styles";
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  openModal?(): void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ openModal }) => {
+  const { user } = useAuth();
+  const history = useHistory();
+
+  function handleLoginModal() {
+    history.push(home);
+    openModal && openModal();
+  }
+
   return (
     <Container>
       <section id="headerMobile">
@@ -20,7 +35,11 @@ export const Header: React.FC = () => {
         <div className="searchAndLogin">
           <img src="./assets/search.svg" alt="Pesquisar" className="search" />
           <input type="text" className="mobileSearch" />
-          <img src="./assets/userIcon.svg" alt="Login" />
+          <img
+            src="./assets/userIcon.svg"
+            alt="Login"
+            onClick={handleLoginModal}
+          />
         </div>
       </section>
 
@@ -51,20 +70,30 @@ export const Header: React.FC = () => {
             </button>
           </Jobs>
 
-          <button type="button">
-            <img src="./assets/premiumIcon.svg" alt="Premium" />
-            <Link to={payment}>Premium</Link>
-          </button>
+          {(!!user && user.userType === Usertype.free) || !user ? (
+            <button type="button">
+              <img src="./assets/premiumIcon.svg" alt="Premium" />
+              <Link
+                to={
+                  !!user && user.userType === Usertype.free ? payment : signup
+                }
+              >
+                Premium
+              </Link>
+            </button>
+          ) : (
+            <button type="button">
+              <img src="./assets/eventsIcon.svg" alt="Eventos" />
+              <Link to={dashboardEvents}>Eventos</Link>
+            </button>
+          )}
 
-          <button type="button">
-            <img src="./assets/eventsIcon.svg" alt="Eventos" />
-            <Link to={dashboardEvents}>Eventos</Link>
-          </button>
-
-          <button type="button">
-            <img src="./assets/userIcon.svg" alt="Login" />
-            Login
-          </button>
+          {!user && (
+            <button type="button" onClick={handleLoginModal}>
+              <img src="./assets/userIcon.svg" alt="Login" />
+              Login
+            </button>
+          )}
         </div>
       </section>
     </Container>

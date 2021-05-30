@@ -8,7 +8,11 @@ import { Container, Content } from "./styles";
 //   password: string;
 // }
 
-export const LoginCard: React.FC = () => {
+interface LoginCardProp {
+  closeModal?(): void;
+}
+
+export const LoginCard: React.FC<LoginCardProp> = ({ closeModal }) => {
   // const history = useHistory();
 
   // const [loginCredentials, setLoginCredentials] = useState<LoginCredentials>({
@@ -30,9 +34,16 @@ export const LoginCard: React.FC = () => {
   //   history.push("/");
   // }
 
+  function closeLoginModal() {
+    closeModal && closeModal();
+  }
+
   return (
     <Container>
       <Content>
+        <span className="closeModal" onClick={closeLoginModal}>
+          <img src="./assets/closeModal.svg" alt="Fechar" />
+        </span>
         <Link to={home} className="goBack">
           <img
             src="./assets/leftVector.svg"

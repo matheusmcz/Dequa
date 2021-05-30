@@ -1,11 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
-import { dashboardEvents } from "src/routes/routes_constants";
+import { useAuth, Usertype } from "src/context/auth";
+import { dashboardEvents, payment } from "src/routes/routes_constants";
 import { Container, Content } from "./styles";
 
 export const EventPage: React.FC = () => {
+  const { user } = useAuth();
+
+  const history = useHistory();
+
+  if (!!user && user.userType === Usertype.free) {
+    history.push(payment);
+  }
+
   return (
     <Container>
       <Header />

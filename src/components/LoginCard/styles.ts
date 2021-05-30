@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: none;
+  display: grid;
   position: absolute;
 
   @media (max-width: 800px) {
@@ -29,6 +29,14 @@ export const Content = styled.div`
     padding: 24px 16px;
 
     background: #ffffff;
+
+    .closeModal {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      margin: 24px;
+    }
 
     .goBack {
       font-family: "September", sans-serif;
@@ -79,9 +87,8 @@ export const Content = styled.div`
 
     button[type="submit"] {
       display: flex;
-      margin: 40px 16px 32px 16px;
+      margin: 40px 48px;
       padding: 8px 121px;
-
       font-family: "Helvetica-Bold", sans-serif;
       font-size: 18px;
       line-height: 28px;
@@ -124,6 +131,14 @@ export const Content = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    .closeModal {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      margin: 16px;
+    }
 
     .goBack {
       display: flex;

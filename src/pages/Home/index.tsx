@@ -1,64 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { BetsCompanies } from "src/components/BetsCompanies/indes";
 import { Footer } from "src/components/Footer";
 import { JobCard } from "src/components/JobCard/indes";
 import { LoginCard } from "src/components/LoginCard";
-import { dashboardJobs } from "src/routes/routes_constants";
+import { dashboardJobs, payment } from "src/routes/routes_constants";
 import { Header } from "../../components/Header";
 import { Banner, Container, Content, MoreJobs } from "./styles";
 
 export const Home: React.FC = () => {
+  const [modalShown, setModalShown] = useState(false);
+
+  function handleLoginModal() {
+    setModalShown(!modalShown);
+  }
+
   return (
-    <Container>
-      <Header />
-      <Banner>
-        <div className="bannerTop">
-          <img src="./assets/bannerTop.svg" alt="" />
-        </div>
-        <section className="bannerText">
-          <h2>Educação inclusiva</h2>
-          <span>
-            Nosso intuito é promover e facilitar a presença de deficientes
-            auditivos e de fala no mercado de trabalho. Seja Premium e conheça
-            nossos eventos voltados para sua capacitação.
-          </span>
-          <p>
-            Nosso intuito é promover e facilitar a presença de deficientes
-            auditivos e de fala no mercado de trabalho, auxiliando na busca de
-            vagas e proponto recursos alternativos para sua capacitação. Vamos
-            juntos na luta pela inclusão.
-          </p>
-          <div className="premium">
-            <h3>SEJA PREMIUM</h3>
-            <p>
-              Seja Premium e conheça nossos cursos voltados para sua necessidade
-            </p>
-            <button>Premium</button>
+    <>
+      {modalShown && <LoginCard closeModal={handleLoginModal} />}
+      <Container>
+        <Header openModal={handleLoginModal} />
+        <Banner>
+          <div className="bannerTop">
+            <img src="./assets/bannerTop.svg" alt="" />
           </div>
-        </section>
-        <div className="bannerImg">
-          <img src="./assets/bannerImg.svg" alt="" />
-        </div>
-        <div className="bannerBottom">
-          <img src="./assets/bannerBottom.svg" alt="" />
-        </div>
-      </Banner>
-      <Content>
-        <h3 className="title">Vagas para você</h3>
+          <section className="bannerText">
+            <h2>Educação inclusiva</h2>
+            <span>
+              Nosso intuito é promover e facilitar a presença de deficientes
+              auditivos e de fala no mercado de trabalho. Seja Premium e conheça
+              nossos eventos voltados para sua capacitação.
+            </span>
+            <p>
+              Nosso intuito é promover e facilitar a presença de deficientes
+              auditivos e de fala no mercado de trabalho, auxiliando na busca de
+              vagas e proponto recursos alternativos para sua capacitação. Vamos
+              juntos na luta pela inclusão.
+            </p>
+            <Link className="premium" to={payment}>
+              <h3>SEJA PREMIUM</h3>
+              <p>
+                Seja Premium e conheça nossos cursos voltados para sua
+                necessidade
+              </p>
+              <button>Premium</button>
+            </Link>
+          </section>
+          <div className="bannerImg">
+            <img src="./assets/bannerImg.svg" alt="" />
+          </div>
+          <div className="bannerBottom">
+            <img src="./assets/bannerBottom.svg" alt="" />
+          </div>
+        </Banner>
+        <Content>
+          <h3 className="title">Vagas para você</h3>
 
-        <JobCard />
-        <JobCard />
-        <JobCard />
+          <JobCard />
+          <JobCard />
+          <JobCard />
 
-        <MoreJobs to={dashboardJobs}>
-          <button type="button" className="moreJobs">
-            Ver todas as vagas
-          </button>
-        </MoreJobs>
-      </Content>
-      <BetsCompanies />
-      <Footer />
-      <LoginCard />
-    </Container>
+          <MoreJobs to={dashboardJobs}>
+            <button type="button" className="moreJobs">
+              Ver todas as vagas
+            </button>
+          </MoreJobs>
+        </Content>
+        <BetsCompanies />
+        <Footer />
+      </Container>
+    </>
   );
 };

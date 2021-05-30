@@ -1,15 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth, Usertype } from "src/context/auth";
 import {
   dashboardEvents,
   dashboardJobs,
   home,
   payment,
+  signup,
 } from "src/routes/routes_constants";
 import { MenuFooter } from "../MenuFooter";
 import { Container, Content } from "./styles";
 
 export const HeaderMenu: React.FC = () => {
+  const { user } = useAuth();
   return (
     <Container>
       <Content>
@@ -28,12 +31,19 @@ export const HeaderMenu: React.FC = () => {
               <li>Vagas</li>
             </Link>
 
-            <Link to={payment}>
-              <li>Plano Premium</li>
-            </Link>
-            <Link to={dashboardEvents}>
-              <li>Eventos</li>
-            </Link>
+            {(!!user && user.userType === Usertype.free) || !user ? (
+              <Link
+                to={
+                  !!user && user.userType === Usertype.free ? payment : signup
+                }
+              >
+                <li>Plano Premium</li>
+              </Link>
+            ) : (
+              <Link to={dashboardEvents}>
+                <li>Eventos</li>
+              </Link>
+            )}
 
             <Link to="/">
               <li>Central de atendimento</li>

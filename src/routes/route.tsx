@@ -5,6 +5,7 @@ import {
   RouteProps as ReactRouterDOMProps,
 } from "react-router-dom";
 import { useAuth } from "../context/auth";
+import { home } from "./routes_constants";
 
 interface RouteProps extends ReactRouterDOMProps {
   isPrivate?: boolean;
@@ -25,7 +26,7 @@ const Route: React.FC<RouteProps> = ({
         return isPrivate === !!user ? (
           <Component />
         ) : (
-          <Redirect to={{ pathname: isPrivate ? "/" : "/" }} /> //colocar path
+          <Redirect to={{ pathname: home }} />
         );
       }}
     />

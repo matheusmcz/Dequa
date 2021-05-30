@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://localghost:3000",
+  baseURL: "https://dequa.herokuapp.com",
 });
