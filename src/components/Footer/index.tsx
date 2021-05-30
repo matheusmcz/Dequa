@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { payment, signup } from "src/routes/routes_constants";
 import { Container, Content } from "./styles";
 
 export const Footer: React.FC = () => {
@@ -50,8 +51,8 @@ export const Footer: React.FC = () => {
         <section className="categories">
           <h4>CATEGORIAS</h4>
           <Link to="/">Login</Link>
-          <Link to="/">Cadastro</Link>
-          <Link to="/">Premium</Link>
+          <Link to={signup}>Cadastro</Link>
+          <Link to={payment}>Premium</Link>
         </section>
 
         <section className="policies">

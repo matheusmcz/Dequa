@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { signup } from "src/routes/routes_constants";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 import { Container, Content } from "./styles";
@@ -8,7 +9,7 @@ export const Payment: React.FC = () => {
   return (
     <Container>
       <Header />
-      <Link to="/signin" className="goBack">
+      <Link to={signup} className="goBack">
         <span className="pathDesktop">Home</span>
         <img
           src="./assets/leftVector.svg"
@@ -39,13 +40,7 @@ export const Payment: React.FC = () => {
             <input
               className="paymentName basicsInputStyles"
               type="text"
-              placeholder="Nome"
-            />
-
-            <input
-              className="paymentName basicsInputStyles"
-              type="text"
-              placeholder="Sobrenome"
+              placeholder="Nome completo"
             />
           </label>
 

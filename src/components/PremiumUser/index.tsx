@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { payment } from "src/routes/routes_constants";
 import { Container, Content } from "./styles";
 
 export const PremiumUser: React.FC = () => {
@@ -53,7 +54,7 @@ export const PremiumUser: React.FC = () => {
           />
 
           <button type="submit">
-            <Link to="/payment">Cadastrar</Link>
+            <Link to={payment}>Cadastrar</Link>
           </button>
         </form>
       </Content>

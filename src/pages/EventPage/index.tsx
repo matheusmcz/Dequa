@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
+import { dashboardEvents } from "src/routes/routes_constants";
 import { Container, Content } from "./styles";
 
 export const EventPage: React.FC = () => {
   return (
     <Container>
       <Header />
-      <Link to="/cursos" className="goBack">
+      <Link to={dashboardEvents} className="goBack">
         <span>Home</span>
         <img
           src="./assets/leftVector.svg"

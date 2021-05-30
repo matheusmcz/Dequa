@@ -4,6 +4,7 @@ import { Footer } from "src/components/Footer";
 import { FreeUser } from "src/components/FreeUser";
 import { Header } from "src/components/Header";
 import { PremiumUser } from "src/components/PremiumUser";
+import { home } from "src/routes/routes_constants";
 import { Container, Content } from "./styles";
 
 export const Register: React.FC = () => {
@@ -29,7 +30,7 @@ export const Register: React.FC = () => {
     <Container>
       <Header />
       <Content>
-        <Link to="/" className="goBack">
+        <Link to={home} className="goBack">
           <span>Home</span>
           <img
             src="./assets/leftVector.svg"

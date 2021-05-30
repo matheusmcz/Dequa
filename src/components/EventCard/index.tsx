@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { eventDescription } from "src/routes/routes_constants";
 import { Container } from "./styles";
 
 export const EventCard: React.FC = () => {
   return (
     <Container>
-      <Link className="cardInfo" to="evento">
+      <Link className="cardInfo" to={eventDescription}>
         <header>
           <img
             src="./assets/eventImg.png"

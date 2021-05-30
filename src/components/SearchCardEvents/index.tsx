@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { home } from "src/routes/routes_constants";
 import { Container, Content } from "./styles";
 
 export const SearchCardEvents: React.FC = () => {
   return (
     <Container>
       <div className="goBack">
-        <Link to="/">
+        <Link to={home}>
           <span>Home</span>
           <img
             src="./assets/leftVector.svg"

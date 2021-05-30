@@ -3,6 +3,7 @@ import { BetsCompanies } from "src/components/BetsCompanies/indes";
 import { Footer } from "src/components/Footer";
 import { JobCard } from "src/components/JobCard/indes";
 import { LoginCard } from "src/components/LoginCard";
+import { dashboardJobs } from "src/routes/routes_constants";
 import { Header } from "../../components/Header";
 import { Banner, Container, Content, MoreJobs } from "./styles";
 
@@ -49,7 +50,7 @@ export const Home: React.FC = () => {
         <JobCard />
         <JobCard />
 
-        <MoreJobs to="/dashboard-jobs">
+        <MoreJobs to={dashboardJobs}>
           <button type="button" className="moreJobs">
             Ver todas as vagas
           </button>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { home, signup } from "src/routes/routes_constants";
 import { Container, Content } from "./styles";
 
 // interface LoginCredentials {
@@ -32,7 +33,7 @@ export const LoginCard: React.FC = () => {
   return (
     <Container>
       <Content>
-        <Link to="/" className="goBack">
+        <Link to={home} className="goBack">
           <img
             src="./assets/leftVector.svg"
             alt="Voltar"
@@ -60,7 +61,7 @@ export const LoginCard: React.FC = () => {
 
         <span className="signIn">
           <p>Ainda não tem conta?</p>
-          <Link to="/signin">Cadastre-se</Link>
+          <Link to={signup}>Cadastre-se</Link>
         </span>
       </Content>
     </Container>

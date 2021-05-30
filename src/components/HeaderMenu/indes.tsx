@@ -1,5 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  dashboardEvents,
+  dashboardJobs,
+  home,
+  payment,
+} from "src/routes/routes_constants";
 import { MenuFooter } from "../MenuFooter";
 import { Container, Content } from "./styles";
 
@@ -14,18 +20,18 @@ export const HeaderMenu: React.FC = () => {
           <span></span>
 
           <ul id="menu">
-            <Link id="menuName" to="/">
+            <Link id="menuName" to={home}>
               <p className="menuName">Nome da Marca</p>
             </Link>
 
-            <Link to="/dashboard-jobs">
+            <Link to={dashboardJobs}>
               <li>Vagas</li>
             </Link>
 
-            <Link to="/payment">
+            <Link to={payment}>
               <li>Plano Premium</li>
             </Link>
-            <Link to="/cursos">
+            <Link to={dashboardEvents}>
               <li>Eventos</li>
             </Link>
 

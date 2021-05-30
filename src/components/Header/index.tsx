@@ -1,5 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  dashboardEvents,
+  dashboardJobs,
+  payment,
+} from "src/routes/routes_constants";
 import { HeaderMenu } from "../HeaderMenu/indes";
 import { Container, Jobs } from "./styles";
 
@@ -39,7 +44,7 @@ export const Header: React.FC = () => {
             <input type="text" placeholder="Pesquisar" />
           </div>
 
-          <Jobs to="/dashboard-jobs">
+          <Jobs to={dashboardJobs}>
             <button type="button">
               <img src="./assets/jobsIcon.svg" alt="Vagas" />
               Vagas
@@ -48,12 +53,12 @@ export const Header: React.FC = () => {
 
           <button type="button">
             <img src="./assets/premiumIcon.svg" alt="Premium" />
-            <Link to="/">Premium</Link>
+            <Link to={payment}>Premium</Link>
           </button>
 
           <button type="button">
             <img src="./assets/eventsIcon.svg" alt="Eventos" />
-            <Link to="/cursos">Eventos</Link>
+            <Link to={dashboardEvents}>Eventos</Link>
           </button>
 
           <button type="button">

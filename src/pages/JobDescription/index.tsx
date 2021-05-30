@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
+import { dashboardJobs, home } from "src/routes/routes_constants";
 import { Container, Content } from "./styles";
 
 export const JobDescription: React.FC = () => {
@@ -12,11 +13,11 @@ export const JobDescription: React.FC = () => {
       <Content>
         <section id="companyProfile">
           <div className="goBack">
-            <Link to="/">
+            <Link to={home}>
               <span>Home</span>
             </Link>
 
-            <Link to="/dashboard-jobs">
+            <Link to={dashboardJobs}>
               <img
                 src="./assets/leftVector.svg"
                 alt="Voltar"
@@ -25,7 +26,7 @@ export const JobDescription: React.FC = () => {
               <span>Vagas de emprego</span>
             </Link>
 
-            <Link to="/dashboard-jobs">
+            <Link to={dashboardJobs}>
               <img
                 src="./assets/leftVector.svg"
                 alt="Voltar"

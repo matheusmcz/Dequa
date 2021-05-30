@@ -8,17 +8,26 @@ import { PremiumDashboard } from "src/pages/PremiumDashboard";
 import { Register } from "src/pages/Register";
 import { Home } from "../pages/Home";
 import Route from "./route";
+import {
+  dashboardEvents,
+  dashboardJobs,
+  eventDescription,
+  home,
+  jobDescription,
+  payment,
+  signup,
+} from "./routes_constants";
 
 const Routes: React.FC = () => {
   return (
     <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/dashboard-jobs" component={DashboardJobs} />
-      <Route path="/job-description" component={JobDescription} />
-      <Route path="/signin" component={Register} />
-      <Route path="/payment" component={Payment} />
-      <Route path="/cursos" component={PremiumDashboard} />
-      <Route path="/evento" component={EventPage} />
+      <Route path={home} exact component={Home} />
+      <Route path={dashboardJobs} component={DashboardJobs} />
+      <Route path={jobDescription} component={JobDescription} />
+      <Route path={signup} component={Register} />
+      <Route path={payment} component={Payment} />
+      <Route path={dashboardEvents} component={PremiumDashboard} />
+      <Route path={eventDescription} component={EventPage} />
     </Switch>
   );
 };
