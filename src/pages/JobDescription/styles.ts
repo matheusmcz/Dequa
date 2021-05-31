@@ -253,6 +253,7 @@ export const Content = styled.div`
 
       .companyProfilePicture {
         border-radius: 0;
+        max-width: 344px;
       }
 
       .title {
@@ -291,7 +292,7 @@ export const Content = styled.div`
       .location {
         position: absolute;
         bottom: 0;
-        margin-left: 257px;
+        margin-left: 215px;
         margin-bottom: 48px;
 
         img {
