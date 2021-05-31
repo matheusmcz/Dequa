@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAuth, Usertype } from "src/context/auth";
+import { useAuth } from "src/context/auth";
 import {
   dashboardEvents,
   dashboardJobs,
@@ -8,6 +8,7 @@ import {
   payment,
   signup,
 } from "src/routes/routes_constants";
+import { Usertype } from "src/util/interfaces/interfaces";
 import { MenuFooter } from "../MenuFooter";
 import { Container, Content } from "./styles";
 
@@ -31,11 +32,9 @@ export const HeaderMenu: React.FC = () => {
               <li>Vagas</li>
             </Link>
 
-            {(!!user && user.userType === Usertype.free) || !user ? (
+            {(!!user && user.role === Usertype.free) || !user ? (
               <Link
-                to={
-                  !!user && user.userType === Usertype.free ? payment : signup
-                }
+                to={!!user && user.role === Usertype.free ? payment : signup}
               >
                 <li>Plano Premium</li>
               </Link>

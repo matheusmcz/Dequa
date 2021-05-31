@@ -1,25 +1,13 @@
 import React, { createContext, useCallback, useContext, useState } from "react";
+import { useHistory } from "react-router";
+import { home } from "src/routes/routes_constants";
+import { User } from "src/util/interfaces/interfaces";
 import { api } from "../services/api";
 import { localStorageVariable } from "../util/constants/constants";
 
 interface AuthData {
   token: string;
   user: User;
-}
-
-export enum Usertype {
-  free = "free",
-  premium = "premium",
-}
-
-//TODO Verificar campos do usuário
-
-interface User {
-  name: string;
-  email: string;
-  birth: string;
-  userType: Usertype;
-  id?: string;
 }
 
 interface SignInFields {
@@ -36,6 +24,8 @@ interface AuthContextData {
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 export const AuthProvider: React.FC = ({ children }) => {
+  const history = useHistory();
+
   const [data, setData] = useState(() => {
     const token = localStorage.getItem(`@${localStorageVariable}:token`);
     const user = localStorage.getItem(`@${localStorageVariable}:user`);
@@ -50,9 +40,8 @@ export const AuthProvider: React.FC = ({ children }) => {
   });
 
   const signIn = useCallback(async ({ email, password }) => {
-    const resp = await api.post("/auth/sign-in", { email, password });
-    const user = resp.data;
-    const token = resp.headers.authorization;
+    const resp = await api.post("/session", { email, password });
+    const { user, token } = resp.data;
 
     localStorage.setItem(`@${localStorageVariable}:token`, token);
     localStorage.setItem(`@${localStorageVariable}:user`, JSON.stringify(user));
@@ -67,7 +56,8 @@ export const AuthProvider: React.FC = ({ children }) => {
     localStorage.removeItem(`@${localStorageVariable}:user`);
 
     setData({} as AuthData);
-  }, []);
+    history.push(home);
+  }, [history]);
 
   return (
     <AuthContext.Provider value={{ user: data.user, signIn, signOut }}>

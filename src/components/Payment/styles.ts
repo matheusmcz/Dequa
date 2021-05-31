@@ -35,7 +35,7 @@ export const Container = styled.div`
     }
 
     .headerLogo {
-      opacity: 0;
+      display: none;
     }
 
     .goBack {

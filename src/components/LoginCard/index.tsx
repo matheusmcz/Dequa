@@ -1,38 +1,39 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import { useAuth } from "src/context/auth";
 import { home, signup } from "src/routes/routes_constants";
 import { Container, Content } from "./styles";
 
-// interface LoginCredentials {
-//   email: string;
-//   password: string;
-// }
+interface LoginCredentials {
+  email: string;
+  password: string;
+}
 
 interface LoginCardProp {
   closeModal?(): void;
 }
 
 export const LoginCard: React.FC<LoginCardProp> = ({ closeModal }) => {
-  // const history = useHistory();
+  const history = useHistory();
+  const { signIn } = useAuth();
 
-  // const [loginCredentials, setLoginCredentials] = useState<LoginCredentials>({
-  //   email: "",
-  //   password: "",
-  // } as LoginCredentials);
+  const [loginCredentials, setLoginCredentials] = useState<LoginCredentials>({
+    email: "",
+    password: "",
+  } as LoginCredentials);
 
-  // const { signIn } = useAuth();
+  async function login(event: any) {
+    event.preventDefault();
+    await signIn({
+      email: loginCredentials.email,
+      password: loginCredentials.password,
+    });
 
-  // async function login(event: any) {
-  //   event.preventDefault();
-  //   await signIn({
-  //     email: loginCredentials.email,
-  //     password: loginCredentials.password,
-  //   });
-
-  //TODO COLOCAR O NOME DA PAGINA
-
-  //   history.push("/");
-  // }
+    history.push(home);
+    closeLoginModal();
+    toast.info("Usuário autenticado com sucesso!");
+  }
 
   function closeLoginModal() {
     closeModal && closeModal();
@@ -56,18 +57,38 @@ export const LoginCard: React.FC<LoginCardProp> = ({ closeModal }) => {
         <form className="formLogin">
           <span className="emailField">
             <p>Email</p>
-            <input type="email" placeholder="Digite seu e-mail" />
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              onChange={(event) =>
+                setLoginCredentials({
+                  ...loginCredentials,
+                  email: event.target.value,
+                })
+              }
+            />
           </span>
           <span className="passwordField">
             <p>Senha</p>
-            <input type="password" placeholder="Digite sua senha" />
+            <input
+              type="password"
+              placeholder="Digite sua senha"
+              onChange={(event) =>
+                setLoginCredentials({
+                  ...loginCredentials,
+                  password: event.target.value,
+                })
+              }
+            />
           </span>
 
           <span className="forgotPassword">
-            <Link to="/">Esqueceu sua senha?</Link>
+            <Link to={home}>Esqueceu sua senha?</Link>
           </span>
 
-          <button type="submit">Entrar</button>
+          <button type="submit" onClick={login}>
+            Entrar
+          </button>
         </form>
 
         <span className="signIn">

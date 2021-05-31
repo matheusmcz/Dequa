@@ -31,6 +31,7 @@ export const FreeUser: React.FC = () => {
 
   function registerUser(event: any) {
     event.preventDefault();
+
     // VALIDACOES NO MODO DESESPERO
 
     if (name.length === 0) {
@@ -43,8 +44,8 @@ export const FreeUser: React.FC = () => {
       toast.error("Insira sua data de nascimento");
     } else if (disability === undefined) {
       toast.error("Selecione uma deficiencia");
-    } else if (password.length === 0) {
-      toast.error("Insira sua senha");
+    } else if (password.length < 8) {
+      toast.error("Sua senha precisa no mínimo de 8 dígitos");
     } else if (password !== confirmPassword) {
       toast.error("As senhas não conferem");
     } else

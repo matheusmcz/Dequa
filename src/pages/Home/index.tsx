@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BetsCompanies } from "src/components/BetsCompanies/indes";
 import { Footer } from "src/components/Footer";
 import { JobCard } from "src/components/JobCard/indes";
 import { LoginCard } from "src/components/LoginCard";
 import { dashboardJobs, payment } from "src/routes/routes_constants";
+import { api } from "src/services/api";
+import { Job } from "src/util/interfaces/interfaces";
 import { Header } from "../../components/Header";
 import { Banner, Container, Content, MoreJobs } from "./styles";
 
 export const Home: React.FC = () => {
   const [modalShown, setModalShown] = useState(false);
+  const [jobList, setJobList] = useState<Job[]>([]);
+
+  useEffect(() => {
+    api.get("/vacancies").then((value) => {
+      setJobList(value.data);
+    });
+  }, []);
 
   function handleLoginModal() {
     setModalShown(!modalShown);
@@ -56,9 +65,9 @@ export const Home: React.FC = () => {
         <Content>
           <h3 className="title">Vagas para você</h3>
 
-          <JobCard />
-          <JobCard />
-          <JobCard />
+          {jobList.map((item: Job) => (
+            <JobCard job={item} key={item.id} />
+          ))}
 
           <MoreJobs to={dashboardJobs}>
             <button type="button" className="moreJobs">

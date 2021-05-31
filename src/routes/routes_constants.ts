@@ -1,7 +1,9 @@
 export const home = "/";
 export const dashboardJobs = "/painel-de-vagas";
-export const jobDescription = "/descricao-da-vaga";
+export const jobDescriptionRoot = "/descricao-da-vaga";
+export const jobDescription = `${jobDescriptionRoot}/:jobId`;
 export const signup = "/cadastro";
 export const payment = "/pagamento";
 export const dashboardEvents = "/painel-de-eventos";
-export const eventDescription = "/descricao-do-evento";
+export const eventDescriptionRoot = "/descricao-do-evento";
+export const eventDescription = `${eventDescriptionRoot}/:eventId`;

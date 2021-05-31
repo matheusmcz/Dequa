@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import { useAuth, Usertype } from "src/context/auth";
+import { useAuth } from "src/context/auth";
 import {
   dashboardEvents,
   dashboardJobs,
@@ -8,6 +8,7 @@ import {
   payment,
   signup,
 } from "src/routes/routes_constants";
+import { Usertype } from "src/util/interfaces/interfaces";
 import { HeaderMenu } from "../HeaderMenu/indes";
 import { Container, Jobs } from "./styles";
 
@@ -16,12 +17,16 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ openModal }) => {
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
   const history = useHistory();
 
   function handleLoginModal() {
     history.push(home);
     openModal && openModal();
+  }
+
+  function logOut() {
+    signOut();
   }
 
   return (
@@ -35,11 +40,14 @@ export const Header: React.FC<HeaderProps> = ({ openModal }) => {
         <div className="searchAndLogin">
           <img src="./assets/search.svg" alt="Pesquisar" className="search" />
           <input type="text" className="mobileSearch" />
-          <img
-            src="./assets/userIcon.svg"
-            alt="Login"
-            onClick={handleLoginModal}
-          />
+
+          {!user && (
+            <img
+              src="./assets/userIcon.svg"
+              alt="Login"
+              onClick={handleLoginModal}
+            />
+          )}
         </div>
       </section>
 
@@ -70,13 +78,11 @@ export const Header: React.FC<HeaderProps> = ({ openModal }) => {
             </button>
           </Jobs>
 
-          {(!!user && user.userType === Usertype.free) || !user ? (
+          {(!!user && user.role === Usertype.free) || !user ? (
             <button type="button">
               <img src="./assets/premiumIcon.svg" alt="Premium" />
               <Link
-                to={
-                  !!user && user.userType === Usertype.free ? payment : signup
-                }
+                to={!!user && user.role === Usertype.free ? payment : signup}
               >
                 Premium
               </Link>
@@ -90,8 +96,15 @@ export const Header: React.FC<HeaderProps> = ({ openModal }) => {
 
           {!user && (
             <button type="button" onClick={handleLoginModal}>
-              <img src="./assets/userIcon.svg" alt="Login" />
+              <img src="./assets/userIcon.svg" alt="Entrar" />
               Login
+            </button>
+          )}
+
+          {user && (
+            <button type="submit" onClick={logOut}>
+              <img src="./assets/logOutIcon.svg" alt="Sair" />
+              Log-out
             </button>
           )}
         </div>

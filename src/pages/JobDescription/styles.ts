@@ -292,7 +292,7 @@ export const Content = styled.div`
         position: absolute;
         bottom: 0;
         margin-left: 257px;
-        margin-bottom: 77px;
+        margin-bottom: 48px;
 
         img {
           margin-right: 8px;
@@ -318,7 +318,7 @@ export const Content = styled.div`
       }
 
       .payment {
-        margin-left: -270px;
+        margin-left: -180px;
       }
 
       .modality {

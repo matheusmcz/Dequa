@@ -1,1 +1,1 @@
-export const localStorageVariable = "PCD-Project";
+export const localStorageVariable = "Dequa";

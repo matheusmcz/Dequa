@@ -1,11 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { signup } from "src/routes/routes_constants";
+import { Link, useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import { home, signup } from "src/routes/routes_constants";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 import { Container, Content } from "./styles";
 
 export const Payment: React.FC = () => {
+  const history = useHistory();
+
+  function paymentSubmit() {
+    toast.success("Pagamento Concluído com sucesso!");
+    toast.success("Por favor realize o login");
+
+    history.push(home);
+  }
+
   return (
     <Container>
       <Header />
@@ -79,6 +89,21 @@ export const Payment: React.FC = () => {
             <option className="c-dropDown-item" value="5">
               5x R$ 191,76
             </option>
+            <option className="c-dropDown-item" value="6">
+              6x R$ 159,80
+            </option>
+            <option className="c-dropDown-item" value="7">
+              7x R$ 136,97
+            </option>
+            <option className="c-dropDown-item" value="8">
+              8x R$ 119,85
+            </option>
+            <option className="c-dropDown-item" value="9">
+              9x R$ 106,53
+            </option>
+            <option className="c-dropDown-item" value="10">
+              10x R$ 95,88
+            </option>
           </select>
 
           <p className="info">
@@ -88,7 +113,7 @@ export const Payment: React.FC = () => {
             </a>
           </p>
 
-          <button type="submit">
+          <button type="submit" onClick={paymentSubmit}>
             <p>Finalizar pagamento</p>
           </button>
         </form>

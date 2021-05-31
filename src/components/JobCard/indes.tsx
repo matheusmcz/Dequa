@@ -1,35 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { jobDescription } from "src/routes/routes_constants";
+import { jobDescriptionRoot } from "src/routes/routes_constants";
+import { Job } from "src/util/interfaces/interfaces";
 import { Container } from "./styles";
 
-export const JobCard: React.FC = () => {
+interface JobCardProps {
+  job: Job;
+}
+
+export const JobCard: React.FC<JobCardProps> = ({ job }) => {
   return (
     <Container>
-      <Link className="jobCard" to={jobDescription}>
+      <Link className="jobCard" to={`${jobDescriptionRoot}/${job.id}`}>
         <div className="jobCardImg">
-          <img src="./assets/companyLogo.svg" alt="Ioasys" />
+          <img src={job.company.logo} alt={job.company.name} />
         </div>
         <div className="jobCardInfo">
-          <h4 className="jobName">Auxiliar de produção</h4>
-          <h5 className="jobCompany">Ioasys</h5>
+          <h4 className="jobName">{job.office}</h4>
+          <h5 className="jobCompany">{job.company.name}</h5>
 
           <button className="moreAbout" type="button">
-            <Link to={jobDescription}>Saber mais</Link>
+            <Link to={`${jobDescriptionRoot}/${job.id}`}>Saber mais</Link>
           </button>
 
           <section className="jobLevel">
-            <span className="level">Júnior/Treinee</span>
+            <span className="level">{job.level}</span>
             <div className="jobLocation">
               <img src="./assets/pin.svg" alt="Localização" />
-              <span>João Pessoa</span>
+              <span>{job.company.location}</span>
             </div>
           </section>
-          <p className="jobDescription">
-            Somos mais de seis mil pessoas espalhadas pelas cinco regiões do
-            Brasil, parte de um grupo brasileiro. Essas pessoas movem a economia
-            do país...
-          </p>
+          <p className="jobDescription">{job.description}</p>
         </div>
       </Link>
     </Container>
