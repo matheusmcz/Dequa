@@ -79,7 +79,7 @@ export const SearchCardEvents: React.FC<SearchCardEventsProps> = ({
             <span>Tipos de eventos</span>
           </section>
 
-          <form className="areaSection">
+          <div className="areaSection">
             <select
               name="Area"
               id="c-dropDown"
@@ -134,7 +134,7 @@ export const SearchCardEvents: React.FC<SearchCardEventsProps> = ({
             >
               Buscar
             </button>
-          </form>
+          </div>
         </div>
       </Content>
     </Container>

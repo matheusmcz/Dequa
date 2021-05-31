@@ -77,7 +77,7 @@ export const PremiumUser: React.FC = () => {
   return (
     <Container>
       <Content>
-        <form className="registerForm">
+        <div className="registerForm">
           <p className="titleDesktop">Cadastrar</p>
           <p className="registerDescription">
             Crie seu perfil premium e tenha acesso a todas as vagas e cursos de
@@ -128,7 +128,7 @@ export const PremiumUser: React.FC = () => {
           <input
             className="registerPassword basicsInputStyles"
             type="password"
-            placeholder="Senha"
+            placeholder="Senha de no mínimo 8 dígitos"
             onChange={(event) => setPassword(event.target.value)}
           />
 
@@ -142,7 +142,7 @@ export const PremiumUser: React.FC = () => {
           <button type="submit" onClick={registerPremiumUser}>
             Cadastrar
           </button>
-        </form>
+        </div>
       </Content>
     </Container>
   );

@@ -209,4 +209,10 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media (min-width: 800px) and (max-width: 1080px) {
+    .moreAbout {
+      display: none;
+    }
+  }
 `;

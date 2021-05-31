@@ -81,7 +81,7 @@ export const FreeUser: React.FC = () => {
   return (
     <Container>
       <Content>
-        <form className="registerForm">
+        <div className="registerForm">
           <p className="titleDesktop">Cadastrar</p>
 
           <p className="registerDescription">
@@ -115,6 +115,7 @@ export const FreeUser: React.FC = () => {
             className="registerBirth basicsInputStyles"
             type="date"
             onChange={(event) => setBirthDate(event.target.value)}
+            placeholder="Data de aniversário"
           />
 
           <select
@@ -134,7 +135,7 @@ export const FreeUser: React.FC = () => {
           <input
             className="registerPassword basicsInputStyles"
             type="password"
-            placeholder="Senha"
+            placeholder="Senha de no mínimo 8 dígitos"
             onChange={(event) => setPassword(event.target.value)}
           />
 
@@ -148,7 +149,7 @@ export const FreeUser: React.FC = () => {
           <button type="submit" onClick={registerUser}>
             Cadastrar
           </button>
-        </form>
+        </div>
       </Content>
     </Container>
   );

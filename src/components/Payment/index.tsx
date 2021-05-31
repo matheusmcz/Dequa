@@ -35,7 +35,7 @@ export const Payment: React.FC = () => {
         <span>Pagamento</span>
       </Link>
       <Content>
-        <form className="paymentForm">
+        <div className="paymentForm">
           <p className="paymentDescription">Informações de pagamento</p>
 
           <img
@@ -116,7 +116,7 @@ export const Payment: React.FC = () => {
           <button type="submit" onClick={paymentSubmit}>
             <p>Finalizar pagamento</p>
           </button>
-        </form>
+        </div>
       </Content>
       <Footer />
     </Container>

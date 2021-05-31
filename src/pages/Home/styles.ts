@@ -27,7 +27,7 @@ export const Banner = styled.div`
 
     .bannerText {
       h2 {
-        font-size: 30px;
+        font-size: 2rem;
         font-weight: 400;
         line-height: 36px;
         margin-top: 32px;
@@ -37,8 +37,8 @@ export const Banner = styled.div`
 
       span {
         text-align: center;
-        font-size: 14px;
-        padding-left: 4px;
+        font-size: 1rem;
+        line-height: 1.5vw;
         width: 270px;
         height: 100px;
         font-family: "Helvetica", sans-serif;
@@ -104,11 +104,12 @@ export const Banner = styled.div`
     height: 100vh;
     top: -84px;
 
-    .bannerImg {
+    .bannerImg img {
       position: absolute;
       bottom: 0;
       right: 0;
-      margin-right: 116px;
+      width: 30%;
+      border-top-right-radius: 80px;
     }
 
     .bannerText {
@@ -124,10 +125,10 @@ export const Banner = styled.div`
       }
 
       p:first-of-type {
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 2vw;
+        line-height: 2.5vw;
         font-family: "Helvetica-Bold", sans-serif;
-        max-width: 740px;
+        max-width: 64%;
       }
 
       .premium {
@@ -136,17 +137,17 @@ export const Banner = styled.div`
         }
 
         p {
-          margin-top: 40px;
+          margin-top: 1vw;
           font-family: "Helvetica-Bold", sans-serif;
-          font-size: 18px;
-          line-height: 28px;
-          max-width: 356px;
+          font-size: 1.5vw;
+          line-height: 2vw;
+          max-width: 100%;
           color: #000000;
         }
 
         button {
-          font-family: Helvetica-Bold, sans-serif;
-          font-size: 20px;
+          font-family: "Helvetica-Bold", sans-serif;
+          font-size: 1.3rem;
           line-height: 32px;
           color: var(--gray);
           border: none;
@@ -176,11 +177,7 @@ export const Banner = styled.div`
 
   @media (min-width: 800px) and (max-width: 1440px) {
     .bannerText {
-      margin-top: 316px;
-    }
-
-    .bannerImg {
-      margin-right: 0;
+      margin-top: 25vh;
     }
   }
 `;

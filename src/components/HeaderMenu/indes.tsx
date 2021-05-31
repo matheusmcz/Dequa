@@ -25,7 +25,9 @@ export const HeaderMenu: React.FC = () => {
 
           <ul id="menu">
             <Link id="menuName" to={home}>
-              <p className="menuName">Nome da Marca</p>
+              <p className="menuName">
+                <img src="./assets/headerColorFullLogo.png  " alt="Dequa" />
+              </p>
             </Link>
 
             <Link to={dashboardJobs}>

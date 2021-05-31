@@ -4,7 +4,7 @@ import { BetsCompanies } from "src/components/BetsCompanies/indes";
 import { Footer } from "src/components/Footer";
 import { JobCard } from "src/components/JobCard/indes";
 import { LoginCard } from "src/components/LoginCard";
-import { dashboardJobs, payment } from "src/routes/routes_constants";
+import { dashboardJobs, signup } from "src/routes/routes_constants";
 import { api } from "src/services/api";
 import { Job } from "src/util/interfaces/interfaces";
 import { Header } from "../../components/Header";
@@ -35,20 +35,20 @@ export const Home: React.FC = () => {
           </div>
           <section className="bannerText">
             <h2>Educação inclusiva</h2>
-            <span>
+            <span className="bannerTextMobile">
               Nosso intuito é promover e facilitar a presença de deficientes
               auditivos e de fala no mercado de trabalho. Seja Premium e conheça
               nossos eventos voltados para sua capacitação.
             </span>
-            <p>
+            <p className="bannerTextDesktop">
               Nosso intuito é promover e facilitar a presença de deficientes
               auditivos e de fala no mercado de trabalho, auxiliando na busca de
               vagas e proponto recursos alternativos para sua capacitação. Vamos
               juntos na luta pela inclusão.
             </p>
-            <Link className="premium" to={payment}>
+            <Link className="premium" to={signup}>
               <h3>SEJA PREMIUM</h3>
-              <p>
+              <p className="premiumText">
                 Seja Premium e conheça nossos cursos voltados para sua
                 necessidade
               </p>

@@ -35,7 +35,13 @@ export const Header: React.FC<HeaderProps> = ({ openModal }) => {
         <div className="Menu">
           <HeaderMenu />
         </div>
-        <img className="mobileLogo" src="./assets/headerWhiteLogo.png" alt="" />
+        <Link to={home}>
+          <img
+            className="mobileLogo"
+            src="./assets/headerWhiteLogo.png"
+            alt=""
+          />
+        </Link>
 
         <div className="searchAndLogin">
           <img src="./assets/search.svg" alt="Pesquisar" className="search" />
@@ -58,11 +64,13 @@ export const Header: React.FC<HeaderProps> = ({ openModal }) => {
             src="./assets/headerColorFullLogo.png"
             alt="Logo"
           />
-          <img
-            className="headerWhiteLogo"
-            src="./assets/headerWhiteLogo.png"
-            alt=""
-          />
+          <Link to={home}>
+            <img
+              className="headerWhiteLogo"
+              src="./assets/headerWhiteLogo.png"
+              alt=""
+            />
+          </Link>
         </div>
 
         <div className="menu">

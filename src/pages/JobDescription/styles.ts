@@ -378,7 +378,7 @@ export const Content = styled.div`
     #schedule,
     #accessibility {
       margin-left: 40px;
-      margin-right: 345px;
+      margin-right: 36%;
       border-bottom: 2px solid #e5e5ea;
       padding-bottom: 50px;
 
@@ -512,6 +512,32 @@ export const Content = styled.div`
       right: 0;
       top: 65%;
       border: none;
+    }
+  }
+
+  @media (min-width: 950px) and (max-width: 1440px) {
+    .applyCard {
+      margin-top: 278px;
+    }
+
+    #skills,
+    #schedule {
+      margin-right: 14%;
+    }
+  }
+
+  @media (min-width: 800px) and (max-width: 950px) {
+    width: 100%;
+    .applyCard {
+      display: none;
+    }
+
+    #jobDescription,
+    #companyDescription,
+    #skills,
+    #schedule,
+    #accessibility {
+      margin-right: 0;
     }
   }
 `;

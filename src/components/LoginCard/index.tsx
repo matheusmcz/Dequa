@@ -54,7 +54,7 @@ export const LoginCard: React.FC<LoginCardProp> = ({ closeModal }) => {
           <span>Entrar no seu perfil</span>
         </Link>
 
-        <form className="formLogin">
+        <div className="formLogin">
           <span className="emailField">
             <p>Email</p>
             <input
@@ -89,7 +89,7 @@ export const LoginCard: React.FC<LoginCardProp> = ({ closeModal }) => {
           <button type="submit" onClick={login}>
             Entrar
           </button>
-        </form>
+        </div>
 
         <span className="signIn">
           <p>Ainda não tem conta?</p>
