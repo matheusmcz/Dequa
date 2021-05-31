@@ -44,9 +44,6 @@ export const Header: React.FC<HeaderProps> = ({ openModal }) => {
         </Link>
 
         <div className="searchAndLogin">
-          <img src="./assets/search.svg" alt="Pesquisar" className="search" />
-          <input type="text" className="mobileSearch" />
-
           {!user && (
             <img
               src="./assets/userIcon.svg"
@@ -74,11 +71,6 @@ export const Header: React.FC<HeaderProps> = ({ openModal }) => {
         </div>
 
         <div className="menu">
-          <div className="inputMenu">
-            <img src="./assets/search.svg" alt="" />
-            <input type="text" placeholder="Pesquisar" />
-          </div>
-
           <Jobs to={dashboardJobs}>
             <button type="button">
               <img src="./assets/jobsIcon.svg" alt="Vagas" />

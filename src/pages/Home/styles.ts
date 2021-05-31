@@ -143,6 +143,7 @@ export const Banner = styled.div`
           line-height: 2vw;
           max-width: 100%;
           color: #000000;
+          border: none;
         }
 
         button {

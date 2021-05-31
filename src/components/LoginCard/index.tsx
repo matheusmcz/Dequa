@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { toast } from "react-toastify";
 import { useAuth } from "src/context/auth";
 import { home, signup } from "src/routes/routes_constants";
 import { Container, Content } from "./styles";
@@ -32,7 +31,6 @@ export const LoginCard: React.FC<LoginCardProp> = ({ closeModal }) => {
 
     history.push(home);
     closeLoginModal();
-    toast.info("Usuário autenticado com sucesso!");
   }
 
   function closeLoginModal() {

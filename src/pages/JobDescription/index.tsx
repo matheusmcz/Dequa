@@ -185,7 +185,7 @@ export const JobDescription: React.FC = () => {
               type="submit"
               onClick={handleLinkedin}
             >
-              Aplicar para Vagas
+              Aplicar para vaga
             </button>
           </section>
         </Content>

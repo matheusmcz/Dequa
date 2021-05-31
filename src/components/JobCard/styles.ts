@@ -154,12 +154,10 @@ export const Container = styled.div`
         border-radius: 4px;
         background: transparent;
 
-        a {
-          font-family: "Helvetica-Bold", sans-serif;
-          font-size: 18px;
-          line-height: 28px;
-          color: var(--purpleDark);
-        }
+        font-family: "Helvetica-Bold", sans-serif;
+        font-size: 18px;
+        line-height: 28px;
+        color: var(--purpleDark);
       }
 
       .jobName {

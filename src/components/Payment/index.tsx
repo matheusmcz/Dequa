@@ -37,6 +37,10 @@ export const Payment: React.FC = () => {
       <Content>
         <div className="paymentForm">
           <p className="paymentDescription">Informações de pagamento</p>
+          <p className="registerDescription">
+            Crie seu perfil premium e tenha acesso a todas as vagas e cursos de
+            especialização do nosso catálogo. Tudo isso por apenas 12 x R$79,90.
+          </p>
 
           <img
             src="./assets/paypal.png"
@@ -51,6 +55,16 @@ export const Payment: React.FC = () => {
               className="paymentName basicsInputStyles"
               type="text"
               placeholder="Nome completo"
+            />
+          </label>
+
+          <label htmlFor="">
+            <p className="ownerName">Número do cartão</p>
+
+            <input
+              className="paymentName basicsInputStyles"
+              type="text"
+              placeholder="ex: 0000 0000 0000 0000"
             />
           </label>
 

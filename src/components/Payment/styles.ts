@@ -142,6 +142,14 @@ export const Content = styled.div`
       font-size: 24px;
     }
 
+    .registerDescription {
+      font-family: "Helvetica", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
     .basicsInputStyles {
       display: flex;
       width: 100%;

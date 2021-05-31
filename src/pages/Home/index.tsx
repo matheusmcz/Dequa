@@ -42,16 +42,14 @@ export const Home: React.FC = () => {
             </span>
             <p className="bannerTextDesktop">
               Nosso intuito é promover e facilitar a presença de deficientes
-              auditivos e de fala no mercado de trabalho, auxiliando na busca de
-              vagas e proponto recursos alternativos para sua capacitação. Vamos
-              juntos na luta pela inclusão.
+              auditivos e de fala no mercado de trabalho. Seja Premium e conheça
+              nossos eventos voltados para sua necessidade, te auxiliando na
+              busca de vagas e proponto recursos alternativos para sua
+              capacitação.
             </p>
             <Link className="premium" to={signup}>
               <h3>SEJA PREMIUM</h3>
-              <p className="premiumText">
-                Seja Premium e conheça nossos cursos voltados para sua
-                necessidade
-              </p>
+              <p className="premiumText">Vamos juntos na luta pela inclusão</p>
               <button>Premium</button>
             </Link>
           </section>

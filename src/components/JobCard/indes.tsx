@@ -20,7 +20,7 @@ export const JobCard: React.FC<JobCardProps> = ({ job }) => {
           <h5 className="jobCompany">{job.company.name}</h5>
 
           <button className="moreAbout" type="button">
-            <Link to={`${jobDescriptionRoot}/${job.id}`}>Saber mais</Link>
+            Saber mais
           </button>
 
           <section className="jobLevel">
