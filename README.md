@@ -46,7 +46,7 @@ Usabilidade:
 
 Home
 
-![alt text]![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ae97777-6f4b-4461-bc54-e199aa005aad/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ae97777-6f4b-4461-bc54-e199aa005aad/Untitled.png)
+![Untitled]![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ae97777-6f4b-4461-bc54-e199aa005aad/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ae97777-6f4b-4461-bc54-e199aa005aad/Untitled.png)
 
 A página principal da aplicação apresenta um icone de log-in:
 
