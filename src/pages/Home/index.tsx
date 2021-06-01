@@ -44,7 +44,7 @@ export const Home: React.FC = () => {
               Nosso intuito é promover e facilitar a presença de deficientes
               auditivos e de fala no mercado de trabalho. Seja Premium e conheça
               nossos eventos voltados para sua necessidade, te auxiliando na
-              busca de vagas e proponto recursos alternativos para sua
+              busca de vagas e propondo recursos alternativos para sua
               capacitação.
             </p>
             <Link className="premium" to={signup}>

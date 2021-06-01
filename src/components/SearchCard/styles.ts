@@ -270,5 +270,9 @@ export const Content = styled.div`
       border: none;
       border-radius: 4px;
     }
+
+    .filterButtonMobile {
+      display: none;
+    }
   }
 `;

@@ -45,7 +45,7 @@ export const Register: React.FC = () => {
             Plano Gratuito
           </li>
 
-          <li className="premium" onClick={handleUserTypePremium}>
+          <li className="premium " onClick={handleUserTypePremium}>
             Plano Premium
           </li>
         </ul>

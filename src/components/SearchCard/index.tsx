@@ -32,8 +32,13 @@ export const SearchCard: React.FC<SearchCardJobsProps> = ({
   }
 
   function handleFilter(event: any) {
-    event.preventDefault();
-    handleJobsTheme(selectedTheme);
+    if (event.length === 0) {
+      setSelectedTheme(event);
+      handleJobsTheme(selectedTheme);
+    } else {
+      event.preventDefault();
+      handleJobsTheme(selectedTheme);
+    }
   }
 
   function filterMobile(event: any) {
