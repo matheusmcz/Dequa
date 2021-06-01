@@ -1,46 +1,131 @@
-# Getting Started with Create React App
+Dequa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Passo a passo para instalação:
 
-## Available Scripts
+Clone este repositório através da linha de comando:
 
-In the project directory, you can run:
+git clone [git@github.com](mailto:git@github.com):matheusmcz/Dequa.git
 
-### `yarn start`
+Instalando as dependências:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Acesse a pasta raiz do projeto e rode o comando:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`yarn` ou `npm install`
 
-### `yarn test`
+Dependências:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Aplicação desenvolvida em `React JS`
 
-### `yarn build`
+Utilizando:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`Typescript`, 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`styled-components` (para estilização), 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`axios` (para integração com api),
 
-### `yarn eject`
+`react-router-dom` (utilização de rotas ),
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`date-fns` (formato das datas),
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`react-toastify` (mensagens de sucesso, info, aviso e erro),
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ `HandTalk` tradutor de libras,
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Available Scripts**
 
-## Learn More
+No diretório do projeto você pode rodar o codigo:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **`yarn start`**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Roda o projeto em modo de desenvolvimento. Abra [http://localhost:3000](http://localhost:3000/) para visualização no browser.
+
+Utilizado API [https://dequa.herokuapp.com](https://dequa.herokuapp.com/) |  
+
+link do postman [https://documenter.getpostman.com/view/13464744/TzXwEdjw#268812f7-16ea-42a5-8ede-1cd07a1117a1](https://documenter.getpostman.com/view/13464744/TzXwEdjw#268812f7-16ea-42a5-8ede-1cd07a1117a1)
+
+Usabilidade:
+
+Home
+
+<p>
+  <img src="./public/assets/to_readme/home.png" />
+</p>
+
+A página principal da aplicação apresenta um icone de log-in:
+
+Ao clicar no icone > você deve realizar o cadastro > realizar login
+
+<p>
+  <img src="./public/assets/to_readme/loginModal.png" />
+</p>
+
+Cadastro:
+
+<p>
+  <img src="./public/assets/to_readme/cadastroFree.png" width="310px" height="419px"/>
+</p>
+
+<p>
+  <img src="./public/assets/to_readme/cadastroPremium.png" width="310px" height="419px" />
+</p>
+
+Pagina de pagamento: path: cadastro premium > pagamento
+
+<p>
+  <img src="./public/assets/to_readme/payment.png" width="310px" height="419px" />
+</p>
+
+WebView pagina de vagas:
+
+<p>
+  <img src="./public/assets/to_readme/vagas.png"  />
+</p>
+
+Webview pagina da vaga:
+
+<p>
+  <img src="./public/assets/to_readme/vaga.png" />
+</p>
+
+Funcionalidade de aplicar para vaga: 
+
+<p>
+  <img src="./public/assets/to_readme/aplicarParaVaga.png" width="330px" height="220px" />
+</p>
+
+Mesagens de feedback
+
+<p>
+  <img src="./public/assets/to_readme/toastSuccess.png" width="312px" height="66px" />
+</p>
+
+<p>
+  <img src="./public/assets/to_readme/toastWarning.png" width="312px" height="66px" />
+</p>
+
+Dashboard de eventos possui as mesmas funcionalidades de vagas, com o detalhe de que ao invés de aplicar para o evento o usuário PREMIUM (apenas) pode inscrever-se no evento.
+
+## ScrenShots mobile:
+
+<p>
+  <img src="./public/assets/to_readme/homeMobile.png" width="205px" height="364px" />
+</p>
+
+<p>
+  <img src="./public/assets/to_readme/menuHamburguer.png" width="205px" height="364px" />
+</p>
+
+<p>
+  <img src="./public/assets/to_readme/vagasMobile.png" width="205px" height="364px" />
+</p>
+
+<p>
+  <img src="./public/assets/to_readme/vagaMobile.png" width="205px" height="364px" />
+</p>
+
+HandTalk (tradutor de libras):
+
+<p>
+  <img src="./public/assets/to_readme/handTalk.png" width="256px" height="443px" />
+</p>
