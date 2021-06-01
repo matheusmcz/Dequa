@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    scroll-behavior: smooth;
 
     @font-face {
       font-family: 'September';
@@ -58,6 +59,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
+    scroll-behavior: smooth;
     text-decoration: none;
   }
 

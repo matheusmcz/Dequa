@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  scroll-behavior: smooth;
+`;
 
 export const Content = styled.div`
   @media (max-width: 800px) {
