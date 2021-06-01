@@ -111,6 +111,8 @@ export const FreeUser: React.FC = () => {
             onChange={(event) => setCpf(event.target.value)}
           />
 
+          <p className="birthDateText">Data de nascimento</p>
+
           <input
             className="registerBirth basicsInputStyles"
             type="date"

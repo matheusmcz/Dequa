@@ -58,7 +58,7 @@ export const SearchCardEvents: React.FC<SearchCardEventsProps> = ({
             <input
               className="inputSearch"
               type="text"
-              placeholder="Buscar por uma palavra chave"
+              placeholder="Buscar por nome"
               required
               onChange={(event) => setSearchInput(event.target.value)}
             />

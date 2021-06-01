@@ -61,7 +61,8 @@ export const Payment: React.FC = () => {
 
             <input
               className="paymentName basicsInputStyles"
-              type="text"
+              type="number"
+              max="16"
               placeholder="ex: 0000 0000 0000 0000"
             />
           </label>

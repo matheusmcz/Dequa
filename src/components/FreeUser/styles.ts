@@ -39,6 +39,12 @@ export const Content = styled.div`
       line-height: 20px;
     }
 
+    .birthDateText {
+      font-family: "Helvetica-Bold", sans-serif;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
     button[type="submit"] {
       display: flex;
       padding: 8px 121px;
@@ -86,6 +92,13 @@ export const Content = styled.div`
       font-family: "Helvetica", sans-serif;
       font-size: 16px;
       line-height: 24px;
+    }
+
+    .birthDateText {
+      font-family: "Helvetica-Bold", sans-serif;
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 16px;
     }
 
     button[type="submit"] {
