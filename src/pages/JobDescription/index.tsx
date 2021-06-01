@@ -106,7 +106,7 @@ export const JobDescription: React.FC = () => {
                 </span>
                 <span className="modality">
                   <img src="./assets/jobsIcon.svg" alt="" />
-                  PJ/CLT
+                  {jobDescription.contract}
                 </span>
               </section>
             </div>

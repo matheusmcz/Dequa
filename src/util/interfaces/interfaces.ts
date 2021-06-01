@@ -24,6 +24,7 @@ export interface Job {
   id: string;
   office: string;
   level: string;
+  contract: string;
   isRemote: boolean;
   workload: string;
   salary: number;
