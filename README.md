@@ -46,7 +46,7 @@ Usabilidade:
 
 Home
 
-https://www.notion.so/Dequa-befc6a556d8b436fa06bc8ed58862744#5b5484bd2e234672a48fcfd601ef21cd
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ae97777-6f4b-4461-bc54-e199aa005aad/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ae97777-6f4b-4461-bc54-e199aa005aad/Untitled.png)
 
 A página principal da aplicação apresenta um icone de log-in:
 
