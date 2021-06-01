@@ -21,7 +21,6 @@ export const EventCard: React.FC<EventCardProps> = ({ event }) => {
           <div className="date">
             <img src="./assets/calendar.svg" alt="Data" />
             <p>{format(parseISO(event.date), "dd/MM/yyyy")}</p>
-            {/* <p>{`${day}/${month}/${year}`}</p> */}
           </div>
 
           <p className="description">{event.description}</p>

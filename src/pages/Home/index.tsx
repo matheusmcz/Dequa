@@ -50,7 +50,7 @@ export const Home: React.FC = () => {
             <Link className="premium" to={signup}>
               <h3>SEJA PREMIUM</h3>
               <p className="premiumText">Vamos juntos na luta pela inclusão</p>
-              <button>Premium</button>
+              <button>Seja Premium</button>
             </Link>
           </section>
           <div className="bannerImg">

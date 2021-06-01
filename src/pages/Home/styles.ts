@@ -117,7 +117,12 @@ export const Banner = styled.div`
       padding-left: 40px;
 
       h2 {
-        display: none;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 36px;
+        margin-top: 32px;
+        font-family: "September", sans-serif;
+        margin-bottom: 16px;
       }
 
       span {
@@ -125,10 +130,12 @@ export const Banner = styled.div`
       }
 
       p:first-of-type {
-        font-size: 2vw;
-        line-height: 2.5vw;
+        font-size: 1.7vw;
+        line-height: 1.5vw;
         font-family: "Helvetica-Bold", sans-serif;
-        max-width: 64%;
+        max-width: 54%;
+        border-left: 3px solid var(--softGreen);
+        padding-left: 20px;
       }
 
       .premium {
