@@ -26,6 +26,7 @@ export const SearchCard: React.FC<SearchCardJobsProps> = ({
   }
 
   function handleSelectedThemeMobile(id: string) {
+    console.log(id);
     const findedTheme = themes.find((item) => item.id === id);
     setSelectedTheme(findedTheme);
   }
@@ -34,6 +35,17 @@ export const SearchCard: React.FC<SearchCardJobsProps> = ({
     event.preventDefault();
     handleJobsTheme(selectedTheme);
   }
+
+  function filterMobile(event: any) {
+    event.preventDefault();
+
+    if (searchInput.length > 0) {
+      handleSearch(searchInput);
+    } else if (selectedTheme) {
+      handleJobsTheme(selectedTheme);
+    }
+  }
+
   return (
     <Container>
       <div className="goBack">
@@ -57,7 +69,7 @@ export const SearchCard: React.FC<SearchCardJobsProps> = ({
             <input
               className="inputSearch"
               type="text"
-              placeholder="Buscar por uma palavra chave"
+              placeholder="Buscar por nome"
               required
               onChange={(event) => setSearchInput(event.target.value)}
             />
@@ -88,7 +100,7 @@ export const SearchCard: React.FC<SearchCardJobsProps> = ({
               {themes.map((item: Category) => (
                 <option
                   className="c-dropDown-item"
-                  value="Atendimento ao cliente"
+                  value={item.id}
                   key={item.id}
                 >
                   {item.name}
@@ -122,6 +134,10 @@ export const SearchCard: React.FC<SearchCardJobsProps> = ({
 
             <button className="searchButton" onClick={handleFilter}>
               Buscar
+            </button>
+
+            <button className="filterButtonMobile" onClick={filterMobile}>
+              Buscar!
             </button>
           </div>
         </div>

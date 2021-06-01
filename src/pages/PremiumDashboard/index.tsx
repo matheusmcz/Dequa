@@ -66,7 +66,6 @@ export const PremiumDashboard: React.FC = () => {
           </EventsList>
         </DashBoard>
       </Content>
-      {/* <FooterPages /> */}
       <Footer />
     </Container>
   );

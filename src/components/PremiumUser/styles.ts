@@ -41,13 +41,12 @@ export const Content = styled.div`
 
     button[type="submit"] {
       display: flex;
-      width: 100%;
       padding: 8px 121px;
+      margin: 0px auto;
       background: var(--purpleDark);
       border: none;
       border-radius: 4px;
-
-      font-family: "Helvetica-Bold", sans-serif;
+      font-family: Helvetica-Bold, sans-serif;
       font-size: 18px;
       line-height: 28px;
       color: var(--gray);

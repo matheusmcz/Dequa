@@ -13,9 +13,6 @@ export const Content = styled.div`
   }
 
   #menuToggle a {
-    text-decoration: none;
-    color: #8e8e93;
-
     &:hover {
       transition: filter 0.2s;
       filter: brightness(0.9);
@@ -115,8 +112,15 @@ export const Content = styled.div`
     padding-bottom: 24px;
     border-bottom: 1px solid #d1d1d6;
     margin-top: 24px;
+    color: #8e8e93;
   }
 
+  .footerMenu {
+    border: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
   #menuToggle input:checked ~ ul {
     transform: none;
     position: fixed;
@@ -129,13 +133,5 @@ export const Content = styled.div`
     font-family: "September", sans-serif;
     font-size: 20px;
     color: #000000;
-  }
-
-  .footerMenu {
-    border: none;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
   }
 `;

@@ -108,7 +108,7 @@ export const Content = styled.div`
       display: grid;
     }
 
-    .searchButton {
+    .filterButtonMobile {
       height: 44px;
       margin-top: 24px;
       margin-bottom: 8px;
@@ -120,6 +120,10 @@ export const Content = styled.div`
 
       border: none;
       border-radius: 4px;
+    }
+
+    .searchButton {
+      display: none;
     }
 
     .dropDownVector {

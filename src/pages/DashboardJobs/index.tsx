@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Footer } from "src/components/Footer";
-import { FooterPages } from "src/components/FooterPages";
 import { Header } from "src/components/Header";
 import { JobCard } from "src/components/JobCard/indes";
 import { SearchCard } from "src/components/SearchCard";
@@ -54,7 +53,6 @@ export const DashboardJobs: React.FC = () => {
           ))}
         </List>
       </Content>
-      <FooterPages />
       <Footer />
     </Container>
   );

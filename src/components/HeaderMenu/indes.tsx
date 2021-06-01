@@ -13,7 +13,11 @@ import { MenuFooter } from "../MenuFooter";
 import { Container, Content } from "./styles";
 
 export const HeaderMenu: React.FC = () => {
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
+
+  function handleLogout() {
+    signOut();
+  }
   return (
     <Container>
       <Content>
@@ -55,6 +59,7 @@ export const HeaderMenu: React.FC = () => {
             <Link to="/">
               <li>Políticas</li>
             </Link>
+            {user && <li onClick={handleLogout}>Logout</li>}
             <li className="footerMenu">
               <MenuFooter />
             </li>
