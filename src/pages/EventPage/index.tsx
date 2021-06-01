@@ -1,5 +1,7 @@
+import { format, parseISO } from "date-fns";
 import React, { useEffect, useState } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 import { useAuth } from "src/context/auth";
@@ -23,6 +25,12 @@ export const EventPage: React.FC = () => {
 
   if (!!user && user.role === Usertype.free) {
     history.push(payment);
+  }
+
+  // end-point não disponível no back-end
+
+  function submmitEvent() {
+    toast.success("Inscrição realizada com sucesso!");
   }
 
   return (
@@ -53,7 +61,7 @@ export const EventPage: React.FC = () => {
               <p className="eventTitle">{event.name}</p>
               <span className="eventDate">
                 <img src="./assets/calendar.svg" alt="" />
-                <p>{event.date}</p>
+                <p>{format(parseISO(event.date), "dd/MM/yyyy")}</p>
               </span>
 
               <span className="eventPlataform">
@@ -70,7 +78,7 @@ export const EventPage: React.FC = () => {
               </span>
               <p className="descriptionAbstract">{event.description}</p>
             </div>
-            <button type="submit" className="submitButton">
+            <button className="submitButton" onClick={submmitEvent}>
               <p>Inscrever-se</p>
             </button>
           </Content>

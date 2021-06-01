@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
+import { useAuth } from "src/context/auth";
 import { dashboardJobs, home } from "src/routes/routes_constants";
 import { api } from "src/services/api";
 import { Job } from "src/util/interfaces/interfaces";
@@ -14,6 +15,7 @@ export const JobDescription: React.FC = () => {
     useState<Job | undefined>(undefined);
   const [linkedin, setLinkedin] = useState("");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const { user } = useAuth();
 
   useEffect(() => {
     api.get(`/vacancies/${jobId}`).then((value) => {
@@ -23,25 +25,29 @@ export const JobDescription: React.FC = () => {
 
   function handleLinkedin(event: any) {
     event.preventDefault();
-    if (linkedin.length === 0) {
-      toast.warning("Insira seu perfil do LinkedIn");
-    } else if (!selectedFile) {
-      toast.warning("Curriculo é obrigatório");
+    if (user) {
+      if (linkedin.length === 0) {
+        toast.warning("Insira seu perfil do LinkedIn");
+      } else if (!selectedFile) {
+        toast.warning("Curriculo é obrigatório");
+      } else {
+        const formData = new FormData();
+
+        formData.append("curriculumn", selectedFile);
+        formData.append("vacancyId", jobId);
+        formData.append("linkedin", linkedin);
+
+        api
+          .post("/userApplication", formData)
+          .then((value) => {
+            toast.success("Aplicação para vaga concluida");
+          })
+          .catch((error) => {
+            toast.error(error.response.data.message);
+          });
+      }
     } else {
-      const formData = new FormData();
-
-      formData.append("curriculumn", selectedFile);
-      formData.append("vacancyId", jobId);
-      formData.append("linkedin", linkedin);
-
-      api
-        .post("/userApplication", formData)
-        .then((value) => {
-          toast.success("Aplicação para vaga concluida");
-        })
-        .catch((error) => {
-          toast.error(error.response.data.message);
-        });
+      toast.warning("Você precisa estar logado ao aplicar para uma vaga");
     }
   }
 

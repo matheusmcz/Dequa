@@ -11,8 +11,6 @@ export const Payment: React.FC = () => {
 
   function paymentSubmit() {
     toast.success("Pagamento Concluído com sucesso!");
-    toast.success("Por favor realize o login");
-
     history.push(home);
   }
 

@@ -57,4 +57,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'September', sans-serif;
   }
 
+  a {
+    text-decoration: none;
+  }
+
 `;
