@@ -117,6 +117,12 @@ export const Payment: React.FC = () => {
             <option className="c-dropDown-item" value="10">
               10x R$ 95,88
             </option>
+            <option className="c-dropDown-item" value="11">
+              11x R$ 87,16
+            </option>
+            <option className="c-dropDown-item" value="12">
+              12x R$ 79,90
+            </option>
           </select>
 
           <p className="info">
